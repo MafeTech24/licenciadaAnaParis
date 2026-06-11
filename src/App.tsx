@@ -4,14 +4,17 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import VideoCover from './components/VideoCover';
 import Hero from './components/Hero';
 import About from './components/About';
 import Specialties from './components/Specialties';
-import Philosophy from './components/Philosophy';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Talleres from './pages/Talleres';
+import Recursos from './pages/Recursos';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,33 +35,45 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-brand-bg text-brand-text font-body selection:bg-brand-sage/30 selection:text-brand-text text-base antialiased">
-      {/* Dynamic Navigation */}
-      <Navbar scrolled={scrolled} />
+    <BrowserRouter>
+      <div className="relative min-h-screen bg-brand-bg text-brand-text font-body selection:bg-brand-sage/30 selection:text-brand-text text-base antialiased">
+        {/* Dynamic Navigation */}
+        <Navbar scrolled={scrolled} />
 
-      {/* Main Single Page Layout Sections */}
-      <main id="main-content-flow" className="flex flex-col">
-        {/* Section 1: Hero Header */}
-        <Hero />
+        <Routes>
+          {/* Main Home Route */}
+          <Route path="/" element={
+            <main id="main-content-flow" className="flex flex-col">
+              {/* Section 0: Video Cover Portada */}
+              <VideoCover />
 
-        {/* Section 2: Sobre mí / Bio */}
-        <About />
+              {/* Section 1: Hero Header */}
+              <Hero />
 
-        {/* Section 3: Clinical Specialties */}
-        <Specialties />
+              {/* Section 2: Sobre mí / Bio */}
+              <About />
 
-        {/* Section 4: Immersive Philosophy Quote block */}
-        <Philosophy />
+              {/* Section 3: Clinical Specialties */}
+              <Specialties />
 
-        {/* Section 5: Organic Grid Gallery */}
-        <Gallery />
+              {/* Section 5: Organic Grid Gallery */}
+              <Gallery />
 
-        {/* Section 6: Secure Consultation Contact Form */}
-        <Contact />
-      </main>
+              {/* Section 6: Secure Consultation Contact Form */}
+              <Contact />
+            </main>
+          } />
 
-      {/* Footer block */}
-      <Footer />
-    </div>
+          {/* Talleres Route */}
+          <Route path="/talleres" element={<Talleres />} />
+
+          {/* Recursos Route */}
+          <Route path="/recursos" element={<Recursos />} />
+        </Routes>
+
+        {/* Footer block */}
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

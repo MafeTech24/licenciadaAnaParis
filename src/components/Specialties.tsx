@@ -6,6 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Heart, Baby, Unlock } from 'lucide-react';
+import Philosophy from './Philosophy';
 
 export default function Specialties() {
   const cards = [
@@ -92,6 +93,11 @@ export default function Specialties() {
             );
           })}
         </div>
+      </div>
+
+      {/* Philosophy content directly at the end of specialties */}
+      <div className="mt-20">
+        <Philosophy />
       </div>
     </section>
   );

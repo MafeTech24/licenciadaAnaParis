@@ -34,7 +34,8 @@ export default function PlaceholderImage({
   // Load persisted image on mount or default if provided
   useEffect(() => {
     const saved = localStorage.getItem(`ana_photo_${id}`);
-    if (saved) {
+    // Only use saved if it's a base64 upload or external URL, otherwise fall back to code's defaultSrc
+    if (saved && (saved.startsWith('data:') || saved.startsWith('http://') || saved.startsWith('https://'))) {
       setImageSrc(saved);
     } else if (defaultSrc) {
       setImageSrc(defaultSrc);

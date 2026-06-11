@@ -7,13 +7,13 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Award, BookOpen, Heart } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
-import ani3 from '../../assets/ani3.png';
+import ani2 from '../../assets/ani2.png';
 
 export default function About() {
   const credentials = [
-    { label: 'UNC', desc: 'Lic. en Psicología, Univ. Nacional de Córdoba', icon: BookOpen },
-    { label: 'Doula Certificada', desc: 'Acompañamiento perinatal avanzado', icon: Heart },
-    { label: 'Fundadora', desc: 'Espacios de reconstrucción subjetiva', icon: Award },
+    { label: 'Lic. en Psicología — UNC', desc: 'Universidad Nacional de Córdoba', icon: BookOpen },
+    { label: 'Doula certificada', desc: 'Acompañamiento en embarazo, parto y posparto', icon: Heart },
+    { label: 'Especialista en adicciones y vínculos', desc: 'Enfoque clínico en codependencia y apegos', icon: Award },
   ];
 
   return (
@@ -37,13 +37,13 @@ export default function About() {
               <div className="absolute inset-0 bg-brand-accent/5 rounded-[12px_120px_12px_12px] transform rotate-1 pointer-events-none scale-102" />
               
               <PlaceholderImage
-                id="about_profile"
+                id="about_profile_v2"
                 label="Foto de Ana - Consultorio"
                 altText="Foto de la Lic. Ana Paris en su consultorio en Córdoba"
                 organicClass="organic-about-shape"
                 rotationClass="-rotate-2"
                 aspectClass="aspect-[4/5]"
-                defaultSrc={ani3}
+                defaultSrc={ani2}
               />
             </div>
           </motion.div>
@@ -58,36 +58,30 @@ export default function About() {
           >
             {/* Small Badge */}
             <span className="font-body text-xs font-semibold tracking-widest text-brand-sage-dark uppercase mb-3 block">
-              Mi historia
+              Psicóloga & Doula — UNC
             </span>
 
             {/* Main Title */}
             <h2 className="font-display font-semibold text-3xl sm:text-4xl text-brand-bg-dark leading-tight mb-6">
-              Raíces, Legado y Vocación
+              Sobre mí
             </h2>
 
             {/* Narrative text block */}
             <div className="space-y-4 font-body font-light text-brand-text/90 leading-relaxed text-sm sm:text-base">
               <p>
-                Crecí en una familia dedicada a la salud mental. Mis padres fundaron la{' '}
+                Mi vocación nació de un legado familiar: hija de una médica psiquiatra y un abogado que fundaron la{' '}
                 <strong className="font-semibold text-brand-sage-dark">
                   Fundación por un Mundo Mejor
                 </strong>
-                , un espacio de recuperación y reconstrucción subjetiva.
+                , crecí comprendiendo de cerca las adicciones, el dolor vincular y la resiliencia humana.
               </p>
               <p>
-                Esa historia moldeó mi certeza más profunda: que{' '}
-                <span className="font-medium italic text-brand-accent">
-                  es posible reconstruir vínculos sanos
-                </span>{' '}
-                y habitar el mundo con seguridad personal.
+                Me gradué como <strong className="font-medium">Licenciada en Psicología</strong> en la{' '}
+                <strong className="font-medium">Universidad Nacional de Córdoba</strong> y me formé además como{' '}
+                <strong className="font-medium">Doula</strong>, lo que me permite acompañar el bienestar desde la psicología clínica hasta el mundo perinatal: el parto, el amamantamiento y el deseo de concebir.
               </p>
               <p>
-                Me gradué como <strong className="font-medium">Lic. en Psicología</strong> por la{' '}
-                <strong className="font-medium">UNC (Universidad Nacional de Córdoba)</strong> y me
-                certifiqué como <strong className="font-medium">Doula</strong>, fusionando la
-                profundidad clínica de la psicoterapia de orientación clínica con la sensibilidad y
-                soporte corporal del acompañamiento perinatal.
+                Mi práctica clínica se centra en vínculos tóxicos, adicciones y codependencia. Trabajo con un enfoque empático y directivo para ayudar a identificar patrones disfuncionales, recuperar la autoestima y construir apegos seguros — sin perder la propia identidad.
               </p>
             </div>
 

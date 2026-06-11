@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Center Block - Quick text copy */}
           <div className="text-center font-body text-xs text-brand-cream/80 tracking-wide font-light">
-            © 2025 Lic. Ana Paris · Psicóloga · Doula
+            © 2026 Córdoba, Argentina
           </div>
 
           {/* Right Block - Small Back to Top Button */}
@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="w-full h-[0.5px] bg-brand-sage/20 my-6" />
 
         {/* Studio attribution footer credits */}
-        <div className="flex flex-col sm:flex-row items-center justify-between font-body text-[10px] text-brand-sage/60 select-none">
+        {/*<div className="flex flex-col sm:flex-row items-center justify-between font-body text-[10px] text-brand-sage/60 select-none">
           <p>Córdoba, Argentina. Matrícula Profesional en Psicología UNC.</p>
           <p className="mt-2 sm:mt-0">
             Sitio desarrollado por{' '}
@@ -61,7 +61,7 @@ export default function Footer() {
               MafeTech
             </span>
           </p>
-        </div>
+        </div>*/}
       </div>
     </footer>
   );

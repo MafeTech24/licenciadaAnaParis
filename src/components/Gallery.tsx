@@ -7,8 +7,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Video } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
-import consultorioAni1 from '../../assets/consultorioAni1.png';
-import ani2 from '../../assets/ani2.png';
+import ani4 from '../../assets/ani5.png';
+import ani5 from '../../assets/ani4.png';
+import consultorio from '../../assets/consultorio.png';
 
 export default function Gallery() {
   return (
@@ -52,7 +53,7 @@ export default function Gallery() {
                 organicClass="organic-gallery-shape-1"
                 rotationClass="-rotate-1"
                 aspectClass="aspect-[4/3] md:aspect-[5/4] lg:aspect-[6/5]"
-                defaultSrc={consultorioAni1}
+                defaultSrc={ani4}
               />
             </div>
           </motion.div>
@@ -75,7 +76,7 @@ export default function Gallery() {
                 organicClass="organic-gallery-shape-2"
                 rotationClass="rotate-1"
                 aspectClass="aspect-[16/10] md:aspect-[3/2]"
-                defaultSrc={ani2}
+                defaultSrc={ani5}
               />
             </motion.div>
 
@@ -95,6 +96,7 @@ export default function Gallery() {
                 organicClass="organic-gallery-shape-3"
                 rotationClass="-rotate-1"
                 aspectClass="aspect-[16/10] md:aspect-[3/2]"
+                defaultSrc={consultorio}
               />
             </motion.div>
           </div>
@@ -121,7 +123,7 @@ export default function Gallery() {
             <span className="p-1.5 bg-brand-accent/15 text-brand-accent rounded-full">
               <Video className="w-4 h-4" />
             </span>
-            <span>Modalidad online disponible (Voz y Video)</span>
+            <span>Modalidad online disponible</span>
           </div>
         </motion.div>
 

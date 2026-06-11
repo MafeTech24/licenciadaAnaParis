@@ -19,8 +19,8 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const whatsappNumber = '543516000000'; // Cordoba, Argentina fallback
-  const fallbackEmail = 'lic.anaparis@gmail.com';
+  const whatsappNumber = '5493513907865'; // Cordoba, Argentina fallback
+  const fallbackEmail = 'licenciadaanaparis@gmail.com';
   const instagramUser = 'lic.anaparis';
 
   const handleInputChange = (
@@ -130,7 +130,7 @@ export default function Contact() {
 
                   {/* Instagram */}
                   <a
-                    href={`https://instagram.com/${instagramUser}`}
+                    href={`https://www.instagram.com/${instagramUser}/`}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center justify-center gap-3 w-full py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
