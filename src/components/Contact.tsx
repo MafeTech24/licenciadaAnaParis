@@ -58,7 +58,7 @@ export default function Contact() {
   // Generate customized WhatsApp api message based on user intent
   const getWhatsAppLink = () => {
     const text = encodeURIComponent(
-      `Hola Ana, vi tu sitio web profesional. Me gustaría agendar una primera consulta de orientación. Quedo al aguardo.`
+      `Hola Ana, vi tu sitio web profesional. Me gustaría agendar una primera consulta de orientación. Quedo a la espera.`
     );
     return `https://wa.me/${whatsappNumber}?text=${text}`;
   };

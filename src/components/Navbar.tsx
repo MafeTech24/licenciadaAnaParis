@@ -17,6 +17,13 @@ export default function Navbar({ scrolled }: NavbarProps) {
   const isHomePage = location.pathname === '/';
   const isTransparentOnVideo = isHomePage && !scrolled;
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (isHomePage) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navLinks = [
     { label: 'Sobre mí', href: isHomePage ? '#sobre-mi' : '/#sobre-mi' },
     { label: 'Especialidades', href: isHomePage ? '#especialidades' : '/#especialidades' },
@@ -37,7 +44,12 @@ export default function Navbar({ scrolled }: NavbarProps) {
     >
       <div className="max-w-[1000px] mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a id="nav-logo" href="#" className="flex items-center gap-2 group cursor-pointer focus:outline-none">
+        <Link
+          id="nav-logo"
+          to="/"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 group cursor-pointer focus:outline-none"
+        >
           <Leaf className={`w-5 h-5 transform group-hover:rotate-12 transition-transform duration-300 ${!isTransparentOnVideo ? 'text-brand-sage-dark' : 'text-brand-sage'}`} />
           <div className="flex flex-col">
             <span className={`font-display font-semibold italic text-xl tracking-wide transition-colors duration-300 ${!isTransparentOnVideo ? 'text-brand-text' : 'text-brand-cream'}`}>
@@ -47,7 +59,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
               Psicóloga & Doula
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <div id="nav-desktop-links" className="hidden md:flex items-center gap-8">

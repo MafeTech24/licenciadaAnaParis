@@ -25,6 +25,20 @@ export default function Talleres() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
+  const whatsappNumber = '5493513907865';
+
+  const getWhatsAppLink = (type: 'inscripcion_grupo' | 'consulta_grupo' | 'entrevista_vip') => {
+    let text = '';
+    if (type === 'inscripcion_grupo') {
+      text = 'Hola Ana, vi tu sitio web profesional. Me interesa inscribirme en el Programa Familiar de Consumo Problemático. Quedo a la espera.';
+    } else if (type === 'consulta_grupo') {
+      text = 'Hola Ana, vi tu sitio web profesional. Tengo una consulta sobre el Programa Familiar de Consumo Problemático. Quedo a la espera.';
+    } else if (type === 'entrevista_vip') {
+      text = 'Hola Ana, vi tu sitio web profesional. Me gustaría solicitar una entrevista de admisión para el Acompañamiento Individual VIP. Quedo a la espera.';
+    }
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  };
+
   const groupDetails = [
     { icon: Calendar, text: 'Nueva cohorte cada primer lunes del mes' },
     { icon: Clock, text: '19:15 hs (Argentina)' },
@@ -209,13 +223,15 @@ export default function Talleres() {
             {/* Card Buttons */}
             <div className="p-7 pt-0 border-t border-brand-sage/5 flex flex-col sm:flex-row gap-3">
               <a
-                href="#"
-                className="flex-1 text-center py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+                href={getWhatsAppLink('inscripcion_grupo')}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 text-center py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center"
               >
                 Quiero inscribirme
               </a>
               <a
-                href="https://wa.me/5493513907865"
+                href={getWhatsAppLink('consulta_grupo')}
                 target="_blank"
                 rel="noreferrer"
                 className="flex-1 text-center py-3.5 rounded-full border border-brand-sage text-brand-text hover:bg-brand-bg-sage hover:text-brand-sage-dark text-xs font-semibold uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer"
@@ -309,8 +325,10 @@ export default function Talleres() {
             {/* Card Buttons */}
             <div className="p-7 pt-0 border-t border-brand-sage/5 flex flex-col gap-3">
               <a
-                href="#"
-                className="w-full text-center py-3.5 rounded-full bg-brand-accent text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#A95A2F] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+                href={getWhatsAppLink('entrevista_vip')}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full text-center py-3.5 rounded-full bg-brand-accent text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#A95A2F] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center"
               >
                 Solicitar entrevista de admisión
               </a>
