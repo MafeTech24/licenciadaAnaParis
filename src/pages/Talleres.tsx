@@ -49,10 +49,10 @@ export default function Talleres() {
   ];
 
   const groupForWhom = [
-    'Tenés un familiar con consumo problemático y sentís que tu vida se detuvo',
-    'Pasás los días vigilando, controlando y esperando lo peor',
-    'Querés ayudarlo pero no sabés dónde termina tu responsabilidad',
-    'Estás agotado/a y necesitás herramientas reales, no solo contención',
+    '¿Tenés un familiar con consumo problemático y sentís que tu vida se detuvo?',
+    '¿Pasás los días vigilando, controlando y esperando lo peor?',
+    '¿Querés ayudarlo pero no sabés dónde termina tu responsabilidad?',
+    '¿Estás agotado/a y necesitás herramientas reales, no solo contención?',
   ];
 
   const vipIncludes = [
@@ -82,7 +82,7 @@ export default function Talleres() {
             Programas
           </span>
           <h1 className="font-display font-semibold italic text-4xl sm:text-[44px] leading-tight text-brand-text mb-6">
-            Programa de acompañamiento para familias que atraviesan la problemática de adicción
+            Programa de Acompañamiento para Familiar que atraviesa la Problemática de Adicción
           </h1>
           <p className="font-body font-light text-brand-text-muted text-base leading-relaxed text-left sm:text-center">
             Soy Ana Paris, Licenciada en Psicología (UNC) y Doula. Crecí dentro de una familia dedicada al abordaje de las adicciones — mis padres fundaron la <strong>Fundación por un Mundo Mejor</strong> en Córdoba. Hoy combino ese legado con años de práctica clínica para acompañar a familias que atraviesan el desafío del consumo problemático.
@@ -105,10 +105,10 @@ export default function Talleres() {
                 Programa Grupal
               </span>
               <h2 className="font-display font-semibold text-2xl text-brand-bg-dark mb-2">
-                Programa Familiar — Consumo Problemático
+                Acompañamiento Grupal para Familiar de Persona con Consumo Problemático
               </h2>
               <p className="font-body font-light text-xs text-brand-text-muted leading-relaxed">
-                Taller grupal con cupo reducido para garantizar la interacción personalizada - en algunos módulos participan profesionales invitados de otras áreas - dirigido a familiares que atraviesan la problemática de adicción de un ser querido y necesitan orientación, herramientas y acompañamiento profesional.
+                Taller grupal con cupo reducido para garantizar la interacción personalizada de familiares que atraviesan la problemática de adicción de un ser querido y necesitan orientación, herramientas y acompañamiento profesional. En algunos módulos participan profesionales invitados de otras áreas.
               </p>
             </div>
 
@@ -258,6 +258,25 @@ export default function Talleres() {
             {/* Content Body */}
             <div className="p-7 flex-grow flex flex-col gap-6">
               
+              {/* Para quién es */}
+              <div>
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-3">
+                  ¿Para quién es?
+                </h3>
+                <ul className="space-y-2.5">
+                  {groupForWhom.map((item, idx) => (
+                    <li key={idx} className="flex gap-2.5 items-start text-xs sm:text-sm font-body font-light text-brand-text/95 leading-snug">
+                      <span className="p-0.5 bg-brand-sage/20 text-[#3D6B38] rounded-full mt-0.5 shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <hr className="border-t border-brand-sage/10" />
+
               {/* Qué incluye */}
               <div>
                 <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-3">
