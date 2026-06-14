@@ -19,7 +19,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const whatsappNumber = '5493513907865'; // Cordoba, Argentina fallback
+  const whatsappNumber = '5493516985802'; // Cordoba, Argentina fallback
   const fallbackEmail = 'licenciadaanaparis@gmail.com';
   const instagramUser = 'lic.anaparis';
 
@@ -28,20 +28,46 @@ export default function Contact() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errorMessage) {
+      setErrorMessage('');
+    }
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage('');
 
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!name || !email || !message) {
       setErrorMessage('Por favor, completa los campos requeridos (*).');
       return;
     }
 
+    const modalityLabelMap: Record<string, string> = {
+      presencial: 'Presencial en Córdoba',
+      online: 'Videollamada (Online)',
+      indefinido: 'Consultar opciones',
+    };
+    const preferenciaSesion = modalityLabelMap[formData.modality] || formData.modality;
+
+    const messageText = `Hola Ana, te escribo desde tu sitio web.
+Nombre: ${name}
+Correo: ${email}
+Teléfono: ${formData.phone.trim() || 'No especificado'}
+Preferencia de sesión: ${preferenciaSesion}
+Consulta: ${message}`;
+
+    const whatsappLink = `https://wa.me/5493516985802?text=${encodeURIComponent(messageText)}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+
     setIsSubmitting(true);
 
-    // Simulate clinical service secure receipt API
+    // Simulate completion state
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -119,15 +145,6 @@ export default function Contact() {
                     Enviar WhatsApp
                   </a>
 
-                  {/* Mail */}
-                  <a
-                    href={`mailto:${fallbackEmail}?subject=Consulta%20Profesional%20-%20Lic.%20Ana%20Paris`}
-                    className="flex items-center justify-center gap-3 w-full py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
-                  >
-                    <Mail className="w-4 h-4" />
-                    Enviar Enlace Email
-                  </a>
-
                   {/* Instagram */}
                   <a
                     href={`https://www.instagram.com/${instagramUser}/`}
@@ -190,36 +207,49 @@ export default function Contact() {
                       )}
 
                       {/* Name and Email side-by-side */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-[11px] uppercase tracking-wider font-semibold text-brand-text-muted mb-1.5">
-                            Tu Nombre *
-                          </label>
-                          <input
-                            type="text"
-                            name="name"
-                            required
-                            placeholder="Ej. María Belén"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            className="w-full text-xs sm:text-sm bg-white border border-[#C8DCC4] rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-[11px] uppercase tracking-wider font-semibold text-brand-text-muted mb-1.5">
-                            Correo Electrónico *
-                          </label>
-                          <input
-                            type="email"
-                            name="email"
-                            required
-                            placeholder="Ej. maria@correo.com"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            className="w-full text-xs sm:text-sm bg-white border border-[#C8DCC4] rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all"
-                          />
-                        </div>
-                      </div>
+                      {
+                        /* Error check states */
+                        (() => {
+                          const nameError = errorMessage && !formData.name.trim();
+                          const emailError = errorMessage && !formData.email.trim();
+                          return (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                              <div>
+                                <label className="block text-[11px] uppercase tracking-wider font-semibold text-brand-text-muted mb-1.5">
+                                  Tu Nombre *
+                                </label>
+                                <input
+                                  type="text"
+                                  name="name"
+                                  required
+                                  placeholder="Ej. María Belén"
+                                  value={formData.name}
+                                  onChange={handleInputChange}
+                                  className={`w-full text-xs sm:text-sm bg-white border ${
+                                    nameError ? 'border-red-500 focus:ring-red-500' : 'border-[#C8DCC4] focus:border-brand-sage focus:ring-brand-sage'
+                                  } rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:ring-1 transition-all`}
+                                />
+                              </div>
+                              <div>
+                                <label className="block text-[11px] uppercase tracking-wider font-semibold text-brand-text-muted mb-1.5">
+                                  Correo Electrónico *
+                                </label>
+                                <input
+                                  type="email"
+                                  name="email"
+                                  required
+                                  placeholder="Ej. maria@correo.com"
+                                  value={formData.email}
+                                  onChange={handleInputChange}
+                                  className={`w-full text-xs sm:text-sm bg-white border ${
+                                    emailError ? 'border-red-500 focus:ring-red-500' : 'border-[#C8DCC4] focus:border-brand-sage focus:ring-brand-sage'
+                                  } rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:ring-1 transition-all`}
+                                />
+                              </div>
+                            </div>
+                          );
+                        })()
+                      }
 
                       {/* Phone and Modality Selection */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -265,7 +295,9 @@ export default function Contact() {
                           placeholder="Tu consulta o motivo de acompañamiento..."
                           value={formData.message}
                           onChange={handleInputChange}
-                          className="w-full text-xs sm:text-sm bg-white border border-[#C8DCC4] rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all resize-none"
+                          className={`w-full text-xs sm:text-sm bg-white border ${
+                            errorMessage && !formData.message.trim() ? 'border-red-500 focus:ring-red-500' : 'border-[#C8DCC4] focus:border-brand-sage focus:ring-brand-sage'
+                          } rounded-lg px-3 py-2.5 text-brand-text focus:outline-none focus:ring-1 transition-all resize-none`}
                         />
                       </div>
 

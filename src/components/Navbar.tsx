@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -14,6 +14,7 @@ interface NavbarProps {
 export default function Navbar({ scrolled }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   const isTransparentOnVideo = isHomePage && !scrolled;
 
@@ -24,13 +25,25 @@ export default function Navbar({ scrolled }: NavbarProps) {
     }
   };
 
+  const handleAnchorClick = (e: React.MouseEvent, anchor: string) => {
+    e.preventDefault();
+    if (isHomePage) {
+      document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  };
+
   const navLinks = [
-    { label: 'Sobre mí', href: isHomePage ? '#sobre-mi' : '/#sobre-mi' },
-    { label: 'Especialidades', href: isHomePage ? '#especialidades' : '/#especialidades' },
+    { label: 'Sobre mí', href: '#sobre-mi' },
+    { label: 'Especialidades', href: '#especialidades' },
     { label: 'Talleres', href: '/talleres', isRoute: true },
     { label: 'Recursos', href: '/recursos', isRoute: true },
-    { label: 'Galería', href: isHomePage ? '#galeria' : '/#galeria' },
-    { label: 'Contacto', href: isHomePage ? '#contacto' : '/#contacto' },
+    { label: 'Galería', href: '#galeria' },
+    { label: 'Contacto', href: '#contacto' },
   ];
 
   return (
@@ -80,6 +93,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={(e) => handleAnchorClick(e, link.href)}
                 className={`text-sm font-body tracking-wider transition-colors duration-300 ${
                   !isTransparentOnVideo
                     ? 'text-brand-text hover:text-brand-sage-dark'
@@ -91,7 +105,8 @@ export default function Navbar({ scrolled }: NavbarProps) {
             )
           )}
           <a
-            href={isHomePage ? '#contacto' : '/#contacto'}
+            href="#contacto"
+            onClick={(e) => handleAnchorClick(e, '#contacto')}
             className="text-xs tracking-widest uppercase font-semibold text-white bg-brand-sage-dark hover:bg-brand-bg-dark px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
           >
             Agendar Consulta
@@ -133,7 +148,10 @@ export default function Navbar({ scrolled }: NavbarProps) {
               <a
                 key={link.label}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  handleAnchorClick(e, link.href);
+                }}
                 className="text-base font-body tracking-wider text-brand-text hover:text-brand-sage-dark transition-colors duration-200 py-1"
               >
                 {link.label}
@@ -141,8 +159,11 @@ export default function Navbar({ scrolled }: NavbarProps) {
             )
           )}
           <a
-            href={isHomePage ? '#contacto' : '/#contacto'}
-            onClick={() => setMobileMenuOpen(false)}
+            href="#contacto"
+            onClick={(e) => {
+              setMobileMenuOpen(false);
+              handleAnchorClick(e, '#contacto');
+            }}
             className="text-center font-body text-xs tracking-widest uppercase font-semibold text-white bg-brand-sage-dark hover:bg-brand-bg-dark px-5 py-3 rounded-full transition-all duration-300 shadow-sm cursor-pointer mt-2"
           >
             Agendar Consulta

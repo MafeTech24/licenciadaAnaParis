@@ -25,7 +25,7 @@ export default function Talleres() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  const whatsappNumber = '5493513907865';
+  const whatsappNumber = '5493516985802';
 
   const getWhatsAppLink = (type: 'inscripcion_grupo' | 'consulta_grupo' | 'entrevista_vip') => {
     let text = '';
@@ -43,7 +43,7 @@ export default function Talleres() {
     { icon: Calendar, text: 'Nueva cohorte cada primer lunes del mes' },
     { icon: Clock, text: '19:15 hs (Argentina)' },
     { icon: Laptop, text: 'Virtual — Google Meet' },
-    { icon: Users, text: 'Cupo limitado: 10 personas' },
+    { icon: Users, text: 'Cupo limitado.' },
     { icon: Clock, text: '90 minutos por encuentro' },
     { icon: BookOpen, text: 'Material de trabajo incluido' },
   ];
@@ -58,7 +58,7 @@ export default function Talleres() {
   const vipIncludes = [
     'Encuentros semanales individuales de 60 minutos durante 3 meses',
     'Soporte directo de lunes a viernes ante crisis o consultas urgentes',
-    'Plan de trabajo 100% personalizado a tu dinámica familiar',
+    'Plan de trabajo personalizado según tu dinámica familiar',
     'Material y recursos adaptados a tu caso específico',
   ];
 
@@ -82,7 +82,7 @@ export default function Talleres() {
             Programas
           </span>
           <h1 className="font-display font-semibold italic text-4xl sm:text-[44px] leading-tight text-brand-text mb-6">
-            Programas de Acompañamiento Familiar
+            Programa de acompañamiento para familias que atraviesan la problemática de adicción
           </h1>
           <p className="font-body font-light text-brand-text-muted text-base leading-relaxed text-left sm:text-center">
             Soy Ana Paris, Licenciada en Psicología (UNC) y Doula. Crecí dentro de una familia dedicada al abordaje de las adicciones — mis padres fundaron la <strong>Fundación por un Mundo Mejor</strong> en Córdoba. Hoy combino ese legado con años de práctica clínica para acompañar a familias que atraviesan el desafío del consumo problemático.
@@ -108,7 +108,7 @@ export default function Talleres() {
                 Programa Familiar — Consumo Problemático
               </h2>
               <p className="font-body font-light text-xs text-brand-text-muted leading-relaxed">
-                Para el familiar que quiere dejar de girar alrededor de la adicción y recuperar su propia vida.
+                Taller grupal con cupo reducido para garantizar la interacción personalizada - en algunos módulos participan profesionales invitados de otras áreas - dirigido a familiares que atraviesan la problemática de adicción de un ser querido y necesitan orientación, herramientas y acompañamiento profesional.
               </p>
             </div>
 
@@ -200,44 +200,34 @@ export default function Talleres() {
 
               <hr className="border-t border-brand-sage/10" />
 
-              {/* Inversión */}
+              {/* Importante */}
               <div>
-                <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-2">
-                  Costo
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-3">
+                  IMPORTANTE
                 </h3>
-                <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                  <div>
-                    <span className="text-[10px] uppercase font-semibold text-brand-text-muted block">Argentina</span>
-                    <span className="text-xl sm:text-2xl font-display font-bold text-brand-bg-dark">$300.000 ARS</span>
-                    <span className="text-[10px] text-brand-text-muted font-body block sm:inline sm:ml-1">($25.000 por encuentro)</span>
-                  </div>
-                  <div className="w-[1px] h-6 bg-brand-sage/20 hidden sm:block self-center" />
-                  <div>
-                    <span className="text-[10px] uppercase font-semibold text-brand-text-muted block">Exterior</span>
-                    <span className="text-xl sm:text-2xl font-display font-bold text-brand-bg-dark">USD 300</span>
-                  </div>
+                <div className="space-y-3">
+                  <p className="text-xs font-semibold text-brand-bg-dark">
+                    Primera entrevista gratuita
+                  </p>
+                  <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
+                    Antes de sumarte al programa, te invitamos a tener una primera entrevista gratuita para conocer tu situación, responder tus dudas y evaluar si este espacio es adecuado para vos.
+                  </p>
+                  <p className="text-[10px] font-body text-brand-text-muted italic">
+                    Tocá el botón y coordinamos una primera conversación.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Card Buttons */}
-            <div className="p-7 pt-0 border-t border-brand-sage/5 flex flex-col sm:flex-row gap-3">
-              <a
-                href={getWhatsAppLink('inscripcion_grupo')}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 text-center py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center"
-              >
-                Quiero inscribirme
-              </a>
+            <div className="p-7 pt-0 border-t border-brand-sage/5 flex flex-col gap-3">
               <a
                 href={getWhatsAppLink('consulta_grupo')}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 text-center py-3.5 rounded-full border border-brand-sage text-brand-text hover:bg-brand-bg-sage hover:text-brand-sage-dark text-xs font-semibold uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full text-center py-3.5 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center"
               >
-                <Phone className="w-3.5 h-3.5" />
-                Tengo una consulta
+                Hablemos
               </a>
             </div>
           </motion.div>
@@ -255,13 +245,13 @@ export default function Talleres() {
             {/* Header / Badge */}
             <div className="p-7 border-b border-brand-sage/10 bg-brand-cream/80">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-accent/15 text-brand-accent border border-brand-accent/20 mb-3 text-[10px] font-semibold tracking-wider uppercase">
-                Acompañamiento VIP
+                Programa Individual
               </span>
               <h2 className="font-display font-semibold text-2xl text-brand-bg-dark mb-2">
                 Acompañamiento Individual VIP
               </h2>
               <p className="font-body font-light text-xs text-brand-text-muted leading-relaxed">
-                Para quien necesita privacidad total, profundidad y un proceso diseñado exclusivamente para su historia familiar.
+                Programa individual y personalizado, dirigido a familiares que atraviesan la problemática de adicción de un ser querido y necesitan un espacio privado, profundo y adaptado a su historia familiar.
               </p>
             </div>
 
@@ -297,27 +287,30 @@ export default function Talleres() {
                   Estrategia Exclusiva
                 </h3>
                 <p className="font-display font-light text-brand-bg-dark italic text-base leading-relaxed relative z-10">
-                  "En el programa VIP no hay turnos para hablar ni dinámicas grupales. Todo el espacio, el tiempo y la estrategia son exclusivamente para vos."
+                  "En el programa VIP no hay turnos para hablar ni dinámicas grupales. Todo el espacio, el tiempo y la estrategia están pensados exclusivamente para vos y tu situación familiar."
                 </p>
               </div>
 
               <hr className="border-t border-brand-sage/10" />
 
-              {/* Inversión */}
+              {/* Importante */}
               <div>
-                <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-2">
-                  Costo
+                <h3 className="text-xs uppercase tracking-wider font-semibold text-brand-accent mb-3">
+                  IMPORTANTE
                 </h3>
-                <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                  <div>
-                    <span className="text-[10px] uppercase font-semibold text-brand-text-muted block">Argentina</span>
-                    <span className="text-xl sm:text-2xl font-display font-bold text-brand-bg-dark">$600.000 ARS</span>
-                  </div>
-                  <div className="w-[1px] h-6 bg-brand-sage/20 hidden sm:block self-center" />
-                  <div>
-                    <span className="text-[10px] uppercase font-semibold text-brand-text-muted block">Exterior</span>
-                    <span className="text-xl sm:text-2xl font-display font-bold text-brand-bg-dark">USD 1.000</span>
-                  </div>
+                <div className="space-y-3">
+                  <p className="text-xs font-semibold text-brand-bg-dark">
+                    Primera entrevista gratuita
+                  </p>
+                  <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
+                    El acompañamiento individual comienza con una primera entrevista gratuita, pensada para conocer tu historia familiar, entender qué necesitás y evaluar juntos el mejor camino de trabajo.
+                  </p>
+                  <p className="text-xs font-body italic text-brand-accent leading-relaxed">
+                    Este espacio es privado, personalizado y diseñado especialmente para tu situación.
+                  </p>
+                  <p className="text-[10px] font-body text-brand-text-muted italic">
+                    Tocá el botón y coordinamos una primera conversación.
+                  </p>
                 </div>
               </div>
             </div>
@@ -330,11 +323,8 @@ export default function Talleres() {
                 rel="noreferrer"
                 className="w-full text-center py-3.5 rounded-full bg-brand-accent text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#A95A2F] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center"
               >
-                Solicitar entrevista de admisión
+                Hablemos
               </a>
-              <span className="text-[10px] text-brand-text-muted text-center font-body block select-none">
-                Cupos limitados. La entrevista es gratuita y sin compromiso.
-              </span>
             </div>
           </motion.div>
 
