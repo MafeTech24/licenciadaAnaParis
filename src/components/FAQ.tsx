@@ -18,7 +18,7 @@ export default function FAQ() {
   const faqData: FAQItem[] = [
     {
       question: '¿Para quién son los programas de acompañamiento?',
-      answer: 'Los programas están dirigidos exclusivamente a familiares — no a la persona con adicción. Si tenés un ser querido con consumo problemático y sentís que tu vida se detuvo, que pasás los días vigilando o que necesitás herramientas reales para acompañar sin perderte, este espacio es para vos.'
+      answer: 'Los programas están dirigidos exclusivamente a familiares — no a la persona con adicción —. Si tenés un ser querido con consumo problemático y sentís que tu vida se detuvo, que pasás los días vigilando o que necesitás herramientas reales para acompañar sin perderte, este espacio es para vos.'
     },
     {
       question: '¿Cuál es la diferencia entre el Programa Grupal y el Individual VIP?',
@@ -30,7 +30,7 @@ export default function FAQ() {
     },
     {
       question: '¿Se puede hacer el acompañamiento desde otro país?',
-      answer: 'Sí. Ambos programas son 100% virtuales y están disponibles para toda América Latina y España. El Programa Grupal se realiza por Google Meet a las 19:15 hs (hora Argentina). El Individual VIP también puede hacerse por videollamada.'
+      answer: 'Sí. Ambos programas son 100% virtuales y están disponibles para toda América Latina y España. El Programa Grupal se realiza por Google Meet. El Individual VIP también puede hacerse por videollamada.'
     },
     {
       question: '¿Cómo se abonan los programas desde el exterior?',
@@ -42,11 +42,11 @@ export default function FAQ() {
     },
     {
       question: '¿Quién es Ana Paris?',
-      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Nació en una familia con profundo compromiso en el tema: sus padres fundaron la Fundación por un Mundo Mejor en Córdoba, dedicada al abordaje de las adicciones. Su práctica clínica se centra en vínculos tóxicos, adicciones y codependencia.'
+      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Nació en una familia con profundo compromiso en el tema: sus padres crearon la Fundación por un Mundo Mejor en Córdoba, dedicada al abordaje de las adicciones. Su práctica clínica se centra en vínculos tóxicos, adicciones y codependencia.'
     },
     {
       question: '¿Los programas reemplazan un tratamiento para la persona con adicción?',
-      answer: 'No. Los programas están diseñados para el familiar, no para quien tiene el consumo problemático. El objetivo es que vos puedas recuperar tu vida, establecer límites saludables y acompañar desde un lugar de mayor claridad y cuidado propio — no para que te conviertas en terapeuta de tu ser querido.'
+      answer: 'No. Los programas están diseñados para el familiar, no para quien tiene el consumo problemático. El objetivo es que vos puedas recuperar tu vida, establecer límites saludables y acompañar desde un lugar de mayor claridad y cuidado propio.'
     }
   ];
 
