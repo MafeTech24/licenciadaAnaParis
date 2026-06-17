@@ -7,9 +7,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Video } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
-import ani4 from '../../assets/ani5.png';
-import ani5 from '../../assets/ani4.png';
-import consultorio from '../../assets/consultorio.png';
+import ani4 from '../assets/ani5.png';
+import ani5 from '../assets/ani4.png';
+import consultorio from '../assets/consultorio.png';
 
 export default function Gallery() {
   return (

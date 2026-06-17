@@ -7,7 +7,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Award, BookOpen, Heart } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
-import ani2 from '../../assets/ani2.png';
+import ani2 from '../assets/ani2.png';
 
 export default function About() {
   const credentials = [

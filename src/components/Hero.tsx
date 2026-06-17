@@ -7,7 +7,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Leaf } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
-import ani1 from '../../assets/ani1.png';
+import ani1 from '../assets/ani1.png';
 
 export default function Hero() {
   return (

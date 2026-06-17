@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   ShoppingBag, X, Volume2, ChevronDown, ChevronUp, ArrowRight, Sparkles
 } from 'lucide-react';
-import portadaImg from '../../assets/portada.png';
-import portadaGuiaPractica from '../../assets/portadaGuiaPracticaRespuestas.png';
-import portadaMindfulness from '../../assets/portadaMindfulness.png';
+import portadaImg from '../assets/portada.png';
+import portadaGuiaPractica from '../assets/portadaGuiaPracticaRespuestas.png';
+import portadaMindfulness from '../assets/portadaMindfulness.png';
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 

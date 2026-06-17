@@ -6,7 +6,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
-import presentacionVideo from '../../assets/presentacion.mp4';
+import presentacionVideo from '../assets/presentacion.mp4';
 
 export default function VideoCover() {
   const scrollToContent = () => {
