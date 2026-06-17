@@ -10,6 +10,7 @@ import VideoCover from './components/VideoCover';
 import Hero from './components/Hero';
 import About from './components/About';
 import Specialties from './components/Specialties';
+import FAQ from './components/FAQ';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -55,6 +56,9 @@ export default function App() {
 
               {/* Section 3: Clinical Specialties */}
               <Specialties />
+
+              {/* Section 4: FAQ Accordion */}
+              <FAQ />
 
               {/* Section 5: Organic Grid Gallery */}
               <Gallery />

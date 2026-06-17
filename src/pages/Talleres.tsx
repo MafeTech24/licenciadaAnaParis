@@ -207,10 +207,9 @@ export default function Talleres() {
                 </h3>
                 <div className="space-y-3">
                   <p className="text-xs font-semibold text-brand-bg-dark">
-                    Primera entrevista gratuita
-                  </p>
+                    Primera Sesión de claridad <b>GRATUITA</b>.</p>
                   <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
-                    Antes de sumarte al programa, te invitamos a tener una primera entrevista gratuita para conocer tu situación, responder tus dudas y evaluar si este espacio es adecuado para vos.
+                    Antes de sumarte al programa, te invitamos a tener la primera sesión de claridad de 20 minutos gratuita para identificar tu necesidad, para conocer tu situación, responder tus dudas y evaluar si este espacio es adecuado para vos.
                   </p>
                   <p className="text-[10px] font-body text-brand-text-muted italic">
                     Tocá el botón y coordinamos una primera conversación.
@@ -319,10 +318,10 @@ export default function Talleres() {
                 </h3>
                 <div className="space-y-3">
                   <p className="text-xs font-semibold text-brand-bg-dark">
-                    Primera entrevista gratuita
+                    Primera Sesión de claridad <b>GRATUITA</b>.
                   </p>
                   <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
-                    El acompañamiento individual comienza con una primera entrevista gratuita, pensada para conocer tu historia familiar, entender qué necesitás y evaluar juntos el mejor camino de trabajo.
+                    El acompañamiento individual comienza con una primera sesión de claridad de 20 minutos gratuita, pensada para conocer tu historia familiar, entender qué necesitás y evaluar juntos el mejor camino de trabajo.
                   </p>
                   <p className="text-xs font-body italic text-brand-accent leading-relaxed">
                     Este espacio es privado, personalizado y diseñado especialmente para tu situación.
