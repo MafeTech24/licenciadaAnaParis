@@ -27,12 +27,19 @@ export default function Navbar({ scrolled }: NavbarProps) {
 
   const handleAnchorClick = (e: React.MouseEvent, anchor: string) => {
     e.preventDefault();
+    const cleanAnchor = anchor.startsWith('/') ? anchor.slice(1) : anchor;
     if (isHomePage) {
-      document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+      const element = document.querySelector(cleanAnchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       navigate('/');
       setTimeout(() => {
-        document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+        const element = document.querySelector(cleanAnchor);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }, 300);
     }
   };
@@ -43,7 +50,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
     { label: 'Talleres', href: '/talleres', isRoute: true },
     { label: 'Recursos', href: '/recursos', isRoute: true },
     { label: 'Galería', href: '#galeria' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Preguntas\nFrecuentes', href: isHomePage ? '#faq' : '/#faq' },
   ];
 
   return (
@@ -87,20 +94,32 @@ export default function Navbar({ scrolled }: NavbarProps) {
                     : 'text-brand-cream hover:text-white'
                 }`}
               >
-                {link.label}
+                {link.label === 'Preguntas\nFrecuentes' ? (
+                  <span className="text-center leading-tight">
+                    Preguntas<br />Frecuentes
+                  </span>
+                ) : (
+                  link.label
+                )}
               </Link>
             ) : (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleAnchorClick(e, link.href)}
-                className={`text-sm font-body tracking-wider transition-colors duration-300 ${
+                className={`text-sm font-body tracking-wider transition-colors duration-300 flex items-center justify-center ${
                   !isTransparentOnVideo
                     ? 'text-brand-text hover:text-brand-sage-dark'
                     : 'text-brand-cream hover:text-white'
                 }`}
               >
-                {link.label}
+                {link.label === 'Preguntas\nFrecuentes' ? (
+                  <span className="text-center leading-tight">
+                    Preguntas<br />Frecuentes
+                  </span>
+                ) : (
+                  link.label
+                )}
               </a>
             )
           )}
@@ -142,7 +161,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-body tracking-wider text-brand-text hover:text-brand-sage-dark transition-colors duration-200 py-1"
               >
-                {link.label}
+                {link.label === 'Preguntas\nFrecuentes' ? 'Preguntas Frecuentes' : link.label}
               </Link>
             ) : (
               <a
@@ -154,7 +173,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
                 }}
                 className="text-base font-body tracking-wider text-brand-text hover:text-brand-sage-dark transition-colors duration-200 py-1"
               >
-                {link.label}
+                {link.label === 'Preguntas\nFrecuentes' ? 'Preguntas Frecuentes' : link.label}
               </a>
             )
           )}
