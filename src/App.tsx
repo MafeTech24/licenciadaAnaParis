@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Talleres from './pages/Talleres';
 import Recursos from './pages/Recursos';
+import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -77,6 +78,9 @@ export default function App() {
 
         {/* Footer block */}
         <Footer />
+
+        {/* Floating WhatsApp Button */}
+        <WhatsAppFloatingButton />
       </div>
     </BrowserRouter>
   );

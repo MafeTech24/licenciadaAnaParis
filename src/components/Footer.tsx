@@ -64,13 +64,13 @@ export default function Footer() {
 
             <div className="flex flex-col space-y-2.5">
               <a 
-                href="https://wa.me/5493516985802" 
+                href="https://wa.me/5493515557316" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-brand-sage" />
-                <span>+54 9 351 698-5802</span>
+                <span>+54 9 3515 55-7316</span>
               </a>
               <a 
                 href="mailto:licenciadaanaparis@gmail.com" 
@@ -166,7 +166,7 @@ export default function Footer() {
                 Acompañamiento Individual VIP
               </Link>
               <a
-                href="https://wa.me/5493516985802?text=Hola%20Ana%2C%20quiero%20saber%20más%20sobre%20los%20programas."
+                href="https://wa.me/5493515557316?text=Hola%20Ana%2C%20quiero%20saber%20más%20sobre%20los%20programas."
                 target="_blank"
                 rel="noreferrer"
                 className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors flex items-center gap-1"

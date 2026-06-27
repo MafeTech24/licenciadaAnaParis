@@ -19,7 +19,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const whatsappNumber = '5493516985802'; // Cordoba, Argentina fallback
+  const whatsappNumber = '5493515557316'; // Cordoba, Argentina fallback
   const fallbackEmail = 'licenciadaanaparis@gmail.com';
   const instagramUser = 'lic.anaparis';
 
@@ -60,7 +60,7 @@ Teléfono: ${formData.phone.trim() || 'No especificado'}
 Preferencia de sesión: ${preferenciaSesion}
 Consulta: ${message}`;
 
-    const whatsappLink = `https://wa.me/5493516985802?text=${encodeURIComponent(messageText)}`;
+    const whatsappLink = `https://wa.me/5493515557316?text=${encodeURIComponent(messageText)}`;
 
     // Open WhatsApp in a new tab
     window.open(whatsappLink, '_blank', 'noopener,noreferrer');

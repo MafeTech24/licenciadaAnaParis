@@ -25,7 +25,7 @@ export default function Talleres() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  const whatsappNumber = '5493516985802';
+  const whatsappNumber = '5493515557316';
 
   const getWhatsAppLink = (type: 'inscripcion_grupo' | 'consulta_grupo' | 'entrevista_vip') => {
     let text = '';

@@ -66,7 +66,7 @@ El archivo `index.html` incluye:
 | Servicio | Uso |
 |---|---|
 | **Hotmart** | Venta de productos digitales (e-book pack + audiolibro pack) |
-| **WhatsApp Business** | Canal de contacto principal (`+54 9 351 698-5802`) |
+| **WhatsApp Business** | Canal de contacto principal (`+54 9 3515 55-7316`) |
 | **Google Meet** | Plataforma para el Programa Grupal |
 | **MercadoPago** | Pagos locales (Argentina) |
 | **PayPal** | Pagos internacionales (LATAM + España) |
