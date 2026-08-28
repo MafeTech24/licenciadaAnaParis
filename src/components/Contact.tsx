@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Phone, Mail, Instagram, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Phone, Mail, Instagram, Send, CheckCircle2, AlertCircle, MapPin, Navigation } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -22,6 +22,9 @@ export default function Contact() {
   const whatsappNumber = '5493515557316'; // Cordoba, Argentina fallback
   const fallbackEmail = 'licenciadaanaparis@gmail.com';
   const instagramUser = 'lic.anaparis';
+  const officeAddress = 'Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba, Argentina';
+  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
+  const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(officeAddress)}&output=embed`;
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -327,6 +330,49 @@ Consulta: ${message}`;
               </div>
             </div>
 
+          </div>
+
+          {/* Physical Office & Map Card */}
+          <div className="bg-[#FAF6EE] p-6 sm:p-8 rounded-[12px] border border-brand-sage/20 shadow-sm text-left mb-12">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-full bg-brand-sage/15 text-brand-sage-dark shrink-0 mt-0.5">
+                  <MapPin className="w-5 h-5 text-brand-sage-dark" />
+                </div>
+                <div>
+                  <span className="text-[11px] uppercase tracking-wider font-semibold text-brand-accent block mb-1">
+                    Atención Presencial
+                  </span>
+                  <h3 className="font-display font-medium text-xl text-brand-bg-dark mb-1">
+                    Consultorio en Córdoba
+                  </h3>
+                  <p className="font-body font-light text-xs sm:text-sm text-brand-text-muted leading-relaxed">
+                    {officeAddress}
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={googleMapsSearchUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer shrink-0 self-start sm:self-center"
+              >
+                <Navigation className="w-3.5 h-3.5" />
+                <span>Cómo llegar</span>
+              </a>
+            </div>
+
+            {/* Embedded Google Map */}
+            <div className="w-full h-[260px] sm:h-[320px] rounded-lg overflow-hidden border border-brand-sage/20 bg-brand-bg relative shadow-inner">
+              <iframe
+                title="Ubicación del consultorio de Lic. Ana Paris"
+                src={googleMapsEmbedUrl}
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
 
           {/* Warm closing line */}

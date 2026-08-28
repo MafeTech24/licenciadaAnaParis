@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Leaf, ArrowUp, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Leaf, ArrowUp, Phone, Mail, ArrowRight, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const location = useLocation();
@@ -64,19 +64,28 @@ export default function Footer() {
 
             <div className="flex flex-col space-y-2.5">
               <a 
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba, Argentina')}`}
+                target="_blank" 
+                rel="noreferrer" 
+                className="flex items-start gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
+              >
+                <MapPin className="w-3.5 h-3.5 text-brand-sage shrink-0 mt-0.5" />
+                <span>Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba</span>
+              </a>
+              <a 
                 href="https://wa.me/5493515557316" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-brand-sage" />
+                <Phone className="w-3.5 h-3.5 text-brand-sage shrink-0" />
                 <span>+54 9 3515 55-7316</span>
               </a>
               <a 
                 href="mailto:licenciadaanaparis@gmail.com" 
                 className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
               >
-                <Mail className="w-3.5 h-3.5 text-brand-sage" />
+                <Mail className="w-3.5 h-3.5 text-brand-sage shrink-0" />
                 <span>licenciadaanaparis@gmail.com</span>
               </a>
               <a 
@@ -85,7 +94,7 @@ export default function Footer() {
                 rel="noreferrer" 
                 className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
               >
-                <span className="w-3.5 h-3.5 rounded-full border border-brand-sage flex items-center justify-center text-[7px] font-bold text-brand-sage leading-none">IG</span>
+                <span className="w-3.5 h-3.5 rounded-full border border-brand-sage flex items-center justify-center text-[7px] font-bold text-brand-sage leading-none shrink-0">IG</span>
                 <span>@licenciadaanaparis</span>
               </a>
             </div>
