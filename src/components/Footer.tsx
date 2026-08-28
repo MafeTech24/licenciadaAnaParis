@@ -57,10 +57,6 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            
-            <p className="font-body font-light text-xs text-brand-cream/70 leading-relaxed mb-6">
-              Acompañamiento psicológico para familiar que atraviesa la problemática de adicción de un ser querido.
-            </p>
 
             <div className="flex flex-col space-y-2.5">
               <a 
