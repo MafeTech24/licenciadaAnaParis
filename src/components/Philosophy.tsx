@@ -62,7 +62,7 @@ export default function Philosophy() {
                 Lic. Ana Paris
               </cite>
               <span className="text-xs font-body text-brand-sage tracking-wider mt-1.5 uppercase font-medium">
-                Psicóloga Clínico & Doula (UNC)
+                Psicóloga Clínica & Doula (UNC)
               </span>
             </footer>
           </blockquote>

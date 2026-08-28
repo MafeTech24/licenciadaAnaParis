@@ -88,7 +88,7 @@ export default function About() {
             {/* Local GEO & AEO Intent Paragraph */}
             <div id="geo-local-summary" className="mt-6 p-4.5 rounded-[12px] bg-brand-cream/80 border border-brand-sage/20 text-xs sm:text-sm font-body font-light text-brand-text/95 leading-relaxed">
               <p>
-                <strong className="font-semibold text-brand-bg-dark">Atención Psicológica en Córdoba Capital:</strong> Brindo consultas presenciales en mi consultorio de <strong>Barrio Don Bosco</strong> (Natania 19, Manzana 7, Casa 14), con fácil acceso desde barrios del noroeste y centro de Córdoba, además de atención virtual por videollamada para familias de toda Argentina y el exterior.
+                <strong className="font-semibold text-brand-bg-dark">Atención Psicológica en Córdoba Capital:</strong> Brindo consultas presenciales en mi consultorio de <strong>Barrio Don Bosco</strong> (Natania 19, Manzana 7, Casa 14), con fácil acceso desde barrios del noroeste y centro de Córdoba, además de atención virtual por videollamada para Personas de toda Argentina y el exterior.
               </p>
             </div>
 

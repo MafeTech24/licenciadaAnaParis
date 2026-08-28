@@ -378,8 +378,8 @@ Consulta: ${message}`;
 
           {/* Warm closing line */}
           <div id="contact-closing-line" className="mt-14 pb-4">
-            <span className="w-12 h-[0.5px] bg-brand-sage/40 block mx-auto mb-4" />
-            <p className="font-display italic text-lg sm:text-xl text-brand-text-muted">
+            <span className="w-16 h-[0.5px] bg-brand-sage/50 block mx-auto mb-5" />
+            <p className="font-display italic text-2xl sm:text-3xl md:text-[32px] text-brand-text/85 leading-snug tracking-wide">
               "El primer paso es el más importante."
             </p>
           </div>

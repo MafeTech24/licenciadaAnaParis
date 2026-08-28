@@ -73,7 +73,7 @@ export default function FAQ() {
     // ── Modalidad y logística ──
     {
       question: '¿Se puede hacer el acompañamiento desde otro país?',
-      answer: 'Sí, todas las especialidades y programas cuentan con modalidad virtual para personas de toda Argentina, América Latina y España. Las sesiones y talleres online se realizan mediante videollamada por Google Meet con la misma calidez y profundidad que la atención presencial en Córdoba.'
+      answer: 'Sí, todas las especialidades y programas cuentan con modalidad virtual para personas de toda Argentina, América Latina, Estados Unidos y España. Las sesiones y talleres online se realizan mediante videollamada por Google Meet con la misma calidez y profundidad que la atención presencial en Córdoba.'
     },
     {
       question: '¿Cómo se abonan los procesos desde el exterior?',
