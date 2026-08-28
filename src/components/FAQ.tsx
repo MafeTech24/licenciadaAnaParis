@@ -25,10 +25,6 @@ export default function FAQ() {
       answer: 'El Programa Grupal es un taller virtual con cupo reducido de hasta 10 personas, que se reúne cada primer lunes del mes durante 3 meses (12 encuentros de 90 minutos). El Programa Individual VIP es un proceso 100% privado con encuentros semanales de 60 minutos y soporte directo de lunes a viernes. En el individual no hay dinámicas grupales: todo el espacio y la estrategia son exclusivamente para vos.'
     },
     {
-      question: '¿Qué es la sesión de claridad gratuita?',
-      answer: 'Antes de comenzar cualquier programa, ofrecemos una primera sesión de claridad de 20 minutos sin costo. En ese espacio identificamos tu situación, respondemos tus dudas y evaluamos juntos cuál es el camino más adecuado para vos. No hay compromiso de continuar.'
-    },
-    {
       question: '¿Se puede hacer el acompañamiento desde otro país?',
       answer: 'Sí. Ambos programas son 100% virtuales y están disponibles para toda América Latina y España. El Programa Grupal se realiza por Google Meet. El Individual VIP también puede hacerse por videollamada.'
     },

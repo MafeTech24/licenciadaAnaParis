@@ -14,7 +14,7 @@ export default function Specialties() {
       id: 'clinica',
       icon: Heart,
       title: 'Psicología Clínica',
-      desc: 'Acompañamiento en vínculos tóxicos, adicciones y codependencia.',
+      desc: 'Acompañamiento en vínculos tóxicos, adicciones y codependencia. Gestión de emociones, transitando menopausia, abordaje en trastornos de ansiedad, duelos y separaciones vinculares.',
       badge: 'PROCESO INDIVIDUAL DE ADULTOS',
     },
     {

@@ -9,7 +9,7 @@ import { MapPin, Video } from 'lucide-react';
 import PlaceholderImage from './PlaceholderImage';
 import ani4 from '../assets/ani5.png';
 import ani5 from '../assets/ani4.png';
-import consultorio from '../assets/consultorio.png';
+import consultorioVideo from '@/assets/consultorio360.mp4';
 
 export default function Gallery() {
   return (
@@ -33,7 +33,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Asymmetrical Grid of Photo Placeholders */}
+        {/* Asymmetrical Grid of Photo Placeholders & Video */}
         <div id="gallery-grid" className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-12">
           
           {/* Large Left Photo Frame (7/12 cols) */}
@@ -58,9 +58,9 @@ export default function Gallery() {
             </div>
           </motion.div>
 
-          {/* Two Stacked Right Photo Frames (5/12 cols) */}
-          <div className="md:col-span-5 flex flex-col gap-8 justify-between">
-            {/* Top Stacked Image */}
+          {/* Three Stacked Right Elements (5/12 cols) */}
+          <div className="md:col-span-5 flex flex-col gap-6 justify-between">
+            {/* Foto 1 - Tarjeta cerebro femenino / Acompañamiento Perinatal */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, y: 30 }}
@@ -80,24 +80,25 @@ export default function Gallery() {
               />
             </motion.div>
 
-            {/* Bottom Stacked Image */}
+            {/* VIDEO - Consultorio 360 (reemplaza Foto 2, mismo estilo orgánico) */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            >
-              <div className="absolute -inset-1 bg-brand-accent/5 rounded-[12px_122px_12px_122px] blur-sm -rotate-1 pointer-events-none" />
-              <PlaceholderImage
-                id="gallery_stacked_2"
-                label="Detalles y Libros"
-                altText="Biblioteca y herramientas de fertilidad de la psicóloga"
-                organicClass="organic-gallery-shape-3"
-                rotationClass="-rotate-1"
-                aspectClass="aspect-[16/10] md:aspect-[3/2]"
-                defaultSrc={consultorio}
-              />
+>
+  <div className="absolute -inset-1 bg-brand-accent/5 rounded-[12px_122px_12px_122px] blur-sm -rotate-1 pointer-events-none" />
+  <div className="organic-gallery-shape-3 -rotate-1 aspect-[16/10] md:aspect-[3/2] w-full overflow-hidden shadow-sm hover:shadow-md transition-all duration-500">
+    <video
+      src={consultorioVideo}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+    />
+  </div>
             </motion.div>
           </div>
           
