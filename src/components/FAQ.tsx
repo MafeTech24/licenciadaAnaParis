@@ -151,7 +151,7 @@ export default function FAQ() {
             ¿Todavía tenés dudas?
           </h3>
           <p className="font-body font-light text-brand-cream/80 text-sm md:text-base max-w-md mx-auto mb-6 relative z-10">
-            Escribinos y te respondemos antes de tu primera sesión de claridad.
+            Escribime y te respondo a la brevedad.
           </p>
           <a
             href="https://wa.me/5493515557316?text=Hola%20Ana%2C%20tengo%20una%20consulta%20antes%20de%20comenzar."
@@ -160,7 +160,7 @@ export default function FAQ() {
             className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-bg-dark bg-brand-cream hover:bg-brand-bg-sage hover:text-brand-sage-dark px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] cursor-pointer relative z-10"
           >
             <MessageCircle className="w-4 h-4" />
-            Escribinos tu Duda
+            Escribime tu Duda
           </a>
         </motion.div>
 
