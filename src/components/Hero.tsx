@@ -45,7 +45,7 @@ export default function Hero() {
               className="inline-flex items-center gap-1.5 px-4.5 py-1.5 rounded-full bg-[#EDF2EC] text-[#3D6B38] border border-brand-sage/30 mb-6 shadow-sm font-body text-xs font-semibold tracking-wider uppercase"
             >
               <Leaf className="w-3 h-3" />
-              Psicóloga & Doula
+              Psicóloga en Córdoba Capital & Doula
             </div>
 
             {/* H1 Main Heading */}
@@ -59,9 +59,9 @@ export default function Hero() {
             {/* Body text */}
             <p
               id="hero-description"
-              className="font-body font-light text-base sm:text-lg text-brand-text-muted mb-8 max-w-[500px] leading-relaxed"
+              className="font-body font-light text-base sm:text-lg text-brand-text-muted mb-8 max-w-[520px] leading-relaxed"
             >
-              Acompaño procesos terapéuticos con profundidad clínica y presencia humana.
+              Acompañamiento psicológico especializado en adicciones, consumo problemático y vínculos en <strong>Córdoba Capital</strong> (Barrio Don Bosco) y modalidad online.
             </p>
 
             {/* CTA Buttons */}
@@ -96,7 +96,7 @@ export default function Hero() {
               <PlaceholderImage
                 id="hero_profile"
                 label="Lic. Ana Paris - Retrato"
-                altText="Retrato profesional de la Lic. Ana Paris, psicóloga clínica argentina"
+                altText="Retrato profesional de la Lic. Ana Paris, psicóloga en Córdoba Capital egresada de la UNC"
                 organicClass="organic-profile-shape"
                 rotationClass=""
                 aspectClass="aspect-[4/5.2]"

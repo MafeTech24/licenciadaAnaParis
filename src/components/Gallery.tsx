@@ -49,7 +49,7 @@ export default function Gallery() {
               <PlaceholderImage
                 id="gallery_large"
                 label="Consultorio Principal"
-                altText="Foto principal del consultorio de la Lic. Ana Paris en Córdoba, Argentina"
+                altText="Consultorio de psicología clínica de la Lic. Ana Paris en Barrio Don Bosco, Córdoba Capital"
                 organicClass="organic-gallery-shape-1"
                 rotationClass="-rotate-1"
                 aspectClass="aspect-[4/3] md:aspect-[5/4] lg:aspect-[6/5]"
@@ -72,7 +72,7 @@ export default function Gallery() {
               <PlaceholderImage
                 id="gallery_stacked_1"
                 label="Acompañamiento Perinatal"
-                altText="Detalle del consultorio, área de lactancia y Doula de Ana Paris"
+                altText="Espacio de atención clínica y perinatal en el consultorio de Ana Paris en Córdoba"
                 organicClass="organic-gallery-shape-2"
                 rotationClass="rotate-1"
                 aspectClass="aspect-[16/10] md:aspect-[3/2]"
@@ -87,18 +87,20 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
->
-  <div className="absolute -inset-1 bg-brand-accent/5 rounded-[12px_122px_12px_122px] blur-sm -rotate-1 pointer-events-none" />
-  <div className="organic-gallery-shape-3 -rotate-1 aspect-[16/10] md:aspect-[3/2] w-full overflow-hidden shadow-sm hover:shadow-md transition-all duration-500">
-    <video
-      src={consultorioVideo}
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
-    />
-  </div>
+            >
+              <div className="absolute -inset-1 bg-brand-accent/5 rounded-[12px_122px_12px_122px] blur-sm -rotate-1 pointer-events-none" />
+              <div className="organic-gallery-shape-3 -rotate-1 aspect-[16/10] md:aspect-[3/2] w-full overflow-hidden shadow-sm hover:shadow-md transition-all duration-500">
+                <video
+                  src={consultorioVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  title="Recorrido 360 del consultorio de psicología de la Lic. Ana Paris en Córdoba"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                />
+              </div>
             </motion.div>
           </div>
           

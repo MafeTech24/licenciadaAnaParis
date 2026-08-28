@@ -6,8 +6,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  ShoppingBag, X, Volume2, ChevronDown, ChevronUp, ArrowRight, Sparkles
+  ShoppingBag, X, Volume2, ChevronDown, ChevronUp, ArrowRight, Sparkles, Users, MapPin
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
 import portadaImg from '../assets/portada.png';
 import portadaGuiaPractica from '../assets/portadaGuiaPracticaRespuestas.png';
 import portadaMindfulness from '../assets/portadaMindfulness.png';
@@ -47,7 +50,7 @@ const PRODUCTS: Record<ProductId, Product> = {
     title: 'Intervención familiar en adicciones',
     subtitle: 'Cómo dejar de sostener el caos sin perderte en el intento',
     image: portadaImg,
-    imageAlt: 'Portada del E-book: Intervención familiar en adicciones',
+    imageAlt: 'Portada del E-book Intervención familiar en adicciones escrito por Lic. Ana Paris',
     description:
       'Una guía de 5 capítulos para familiares que acompañan situaciones de consumo problemático. Desde entender cómo la adicción impacta en toda la familia, hasta aprender a comunicarse sin culpa, poner límites reales y cuidarse en el proceso. No hay fórmulas mágicas — hay claridad.',
     extras: {
@@ -69,7 +72,7 @@ const PRODUCTS: Record<ProductId, Product> = {
     title: 'Guía práctica de respuestas y acciones en adicciones',
     subtitle: 'Intervenir desde el amor sin sostener la adicción',
     image: portadaGuiaPractica,
-    imageAlt: 'Portada de la Guía Práctica: Respuestas y acciones en adicciones',
+    imageAlt: 'Portada de la Guía práctica de respuestas y acciones en adicciones por Lic. Ana Paris',
     description:
       'Una guía de acción inmediata para saber exactamente qué decir y qué hacer en los momentos más difíciles. Frases manipuladoras, extorsiones, chantajes, presiones — con respuestas concretas y claves emocionales para cada situación.',
   },
@@ -80,7 +83,7 @@ const PRODUCTS: Record<ProductId, Product> = {
     title: 'Intervención familiar en adicciones',
     subtitle: 'Versión audio — escuchá el libro completo',
     image: portadaImg,
-    imageAlt: 'Portada del Audiolibro: Intervención familiar en adicciones',
+    imageAlt: 'Portada del Audiolibro Intervención familiar en adicciones narrado por Lic. Ana Paris',
     description:
       'El contenido completo del e-book en formato audio. Aproximadamente 1h 40min narrados por la autora. Para escucharlo en el auto, mientras caminás o en cualquier momento que necesitás acompañamiento sin tener que leer.',
   },
@@ -91,7 +94,7 @@ const PRODUCTS: Record<ProductId, Product> = {
     title: 'Mindfulness para superar el bloqueo y la extorsión',
     subtitle: 'Herramientas de regulación emocional para familiares',
     image: portadaMindfulness,
-    imageAlt: 'Portada Guía de Mindfulness',
+    imageAlt: 'Portada de la Guía de Mindfulness para familiares en adicciones por Lic. Ana Paris',
     description:
       'No se trata de relajarte — se trata de desacoplar la reacción emocional automática para que puedas tomar decisiones desde la seguridad y no desde el pánico. Técnicas concretas para los momentos más difíciles: la crisis aguda, la extorsión, el miedo que paraliza.',
     extras: {
@@ -297,10 +300,19 @@ export default function Recursos() {
 
   return (
     <div className="pt-28 pb-24 bg-brand-bg min-h-screen text-brand-text select-none relative">
+      <SEOHead
+        title="Recursos y Guías en Adicciones y Mindfulness | Lic. Ana Paris"
+        description="E-books, audiolibros y guías prácticas de intervención familiar en adicciones y regulación emocional creados por la Lic. Ana Paris."
+        canonicalUrl="https://licenciadaanaparis.com/recursos"
+        keywords="libro adicciones familia, audiolibro intervención adicciones, guía mindfulness adicciones, recursos adicciones Córdoba, Ana Paris libros"
+      />
 
       {/* Blobs decorativos */}
       <div className="absolute top-[12%] right-[5%] w-72 h-72 rounded-full bg-brand-bg-sage opacity-40 blur-3xl pointer-events-none" />
       <div className="absolute bottom-[25%] left-[5%] w-80 h-80 rounded-full bg-brand-cream opacity-55 blur-3xl pointer-events-none" />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Recursos Digitales' }]} />
 
       <div className="w-full max-w-[1000px] mx-auto px-6 relative z-10">
 
@@ -459,6 +471,32 @@ export default function Recursos() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Cross-linking navigation section */}
+        <div className="mt-16 bg-brand-bg-dark text-brand-cream p-8 rounded-[16px] border border-brand-sage/10 shadow-sm text-center">
+          <h3 className="font-display font-medium text-xl text-brand-cream mb-2">
+            ¿Querés un acompañamiento guiado y personalizado?
+          </h3>
+          <p className="font-body font-light text-xs sm:text-sm text-brand-cream/70 max-w-xl mx-auto mb-6">
+            Además de los materiales digitales, la Lic. Ana Paris coordina programas de acompañamiento grupal y sesiones individuales VIP presenciales en Córdoba y online.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/talleres"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#A95A2F] transition-all duration-300 shadow-sm"
+            >
+              <Users className="w-3.5 h-3.5" />
+              <span>Conocer Programas y Talleres</span>
+            </Link>
+            <Link
+              to="/#contacto"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-sage/40 text-brand-cream hover:bg-brand-bg-sage hover:text-brand-sage-dark text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+            >
+              <MapPin className="w-3.5 h-3.5 text-brand-sage" />
+              <span>Consultorio en Córdoba Capital</span>
+            </Link>
+          </div>
         </div>
 
       </div>

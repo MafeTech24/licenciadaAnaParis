@@ -23,8 +23,8 @@ export default function Contact() {
   const fallbackEmail = 'licenciadaanaparis@gmail.com';
   const instagramUser = 'lic.anaparis';
   const officeAddress = 'Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba, Argentina';
-  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeAddress)}`;
-  const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(officeAddress)}&output=embed`;
+  const googleMapsSearchUrl = 'https://www.google.com/maps/place/Subof+Ppal+Francisco+Tomas+Luna+%26+Pasaje+Privado+N%C3%BAmero+7,+X5003+C%C3%B3rdoba/@-31.3836762,-64.2723913,17z';
+  const googleMapsEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.1047099730317!2d-64.27239128959756!3d-31.383676194562177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329ee125273a41%3A0xcdb76f065a92c7db!2sSubof%20Ppal%20Francisco%20Tomas%20Luna%20%26%20Pasaje%20Privado%20N%C3%BAmero%207%2C%20X5003%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1787892930661!5m2!1ses!2sar';
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -369,8 +369,9 @@ Consulta: ${message}`;
                 title="Ubicación del consultorio de Lic. Ana Paris"
                 src={googleMapsEmbedUrl}
                 className="w-full h-full border-0"
+                allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </div>

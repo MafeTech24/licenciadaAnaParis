@@ -16,8 +16,13 @@ import {
   Phone, 
   ShieldCheck, 
   Heart,
-  ChevronRight
+  ChevronRight,
+  BookMarked,
+  MapPin
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 export default function Talleres() {
   // Ensure we start at the top of the page when navigating to workshops
@@ -64,10 +69,19 @@ export default function Talleres() {
 
   return (
     <div className="pt-28 pb-24 bg-brand-bg min-h-screen text-brand-text select-none">
-      
+      <SEOHead
+        title="Programas y Talleres para Familias | Lic. Ana Paris Psicóloga Córdoba"
+        description="Programa grupal y acompañamiento individual VIP para familiares que atraviesan la adicción de un ser querido. Primera sesión de claridad gratuita con la Lic. Ana Paris."
+        canonicalUrl="https://licenciadaanaparis.com/talleres"
+        keywords="programa familiar adicciones, taller grupal adicciones Córdoba, acompañamiento individual VIP adicciones, psicóloga adicciones Córdoba, Ana Paris talleres"
+      />
+
       {/* Decorative Ellipses in background */}
       <div className="absolute top-[15%] left-[5%] w-72 h-72 rounded-full bg-brand-bg-sage opacity-50 blur-3xl pointer-events-none" />
       <div className="absolute bottom-[20%] right-[5%] w-96 h-96 rounded-full bg-brand-cream opacity-60 blur-3xl pointer-events-none" />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: 'Programas y Talleres' }]} />
 
       <div className="w-full max-w-[1000px] mx-auto px-6 relative z-10">
         
@@ -346,6 +360,32 @@ export default function Talleres() {
             </div>
           </motion.div>
 
+        </div>
+
+        {/* Cross-linking navigation section */}
+        <div className="mt-16 bg-[#FAF6EE] p-8 rounded-[16px] border border-brand-sage/20 shadow-sm text-center">
+          <h3 className="font-display font-medium text-xl text-brand-bg-dark mb-2">
+            ¿Buscás material de lectura o atención presencial en Córdoba?
+          </h3>
+          <p className="font-body font-light text-xs sm:text-sm text-brand-text-muted max-w-xl mx-auto mb-6">
+            Complementá tu proceso con nuestros libros y guías de intervención, o coordiná una consulta presencial en nuestro consultorio de Barrio Don Bosco.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/recursos"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-sage-dark text-white text-xs font-semibold uppercase tracking-wider hover:bg-brand-bg-dark transition-all duration-300 shadow-sm"
+            >
+              <BookMarked className="w-3.5 h-3.5" />
+              <span>Ver E-books y Guías Digitales</span>
+            </Link>
+            <Link
+              to="/#contacto"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brand-sage text-brand-text hover:bg-brand-bg-sage hover:text-brand-sage-dark text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+            >
+              <MapPin className="w-3.5 h-3.5 text-brand-sage-dark" />
+              <span>Consultorio en Córdoba Capital</span>
+            </Link>
+          </div>
         </div>
 
       </div>

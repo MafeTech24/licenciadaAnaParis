@@ -39,7 +39,7 @@ export default function About() {
               <PlaceholderImage
                 id="about_profile_v2"
                 label="Foto de Ana - Consultorio"
-                altText="Foto de la Lic. Ana Paris en su consultorio en Córdoba"
+                altText="Lic. Ana Paris en su consultorio de psicología clínica en Barrio Don Bosco, Córdoba Capital"
                 organicClass="organic-about-shape"
                 rotationClass="-rotate-2"
                 aspectClass="aspect-[4/5]"
@@ -58,7 +58,7 @@ export default function About() {
           >
             {/* Small Badge */}
             <span className="font-body text-xs font-semibold tracking-widest text-brand-sage-dark uppercase mb-3 block">
-              Psicóloga & Doula — UNC
+              Psicóloga & Doula — Universidad Nacional de Córdoba (UNC)
             </span>
 
             {/* Main Title */}
@@ -66,22 +66,29 @@ export default function About() {
               Sobre mí
             </h2>
 
-            {/* Narrative text block */}
-            <div className="space-y-4 font-body font-light text-brand-text/90 leading-relaxed text-sm sm:text-base">
+            {/* Narrative text block & E-E-A-T */}
+            <div id="about-bio-summary" className="space-y-4 font-body font-light text-brand-text/90 leading-relaxed text-sm sm:text-base">
               <p>
                 Mi vocación nació de un legado familiar: hija de una médica psiquiatra y un abogado que fundaron la{' '}
                 <strong className="font-semibold text-brand-sage-dark">
                   Fundación por un Mundo Mejor
                 </strong>
-                , crecí comprendiendo de cerca las adicciones, el dolor vincular y la resiliencia humana.
+                {' '}en Córdoba, crecí comprendiendo de cerca las adicciones, el dolor vincular y la resiliencia humana.
               </p>
               <p>
                 Me gradué como <strong className="font-medium">Licenciada en Psicología</strong> en la{' '}
-                <strong className="font-medium">Universidad Nacional de Córdoba</strong> y me formé además como{' '}
-                <strong className="font-medium">Doula</strong>, lo que me permite acompañar el bienestar desde la psicología clínica hasta el mundo perinatal: el parto, el amamantamiento y el deseo de concebir.
+                <strong className="font-medium">Universidad Nacional de Córdoba (UNC)</strong> y me formé además como{' '}
+                <strong className="font-medium">Doula</strong>, lo que me permite acompañar el bienestar desde la psicología clínica hasta el mundo perinatal: el parto, el puerperio y el deseo de concebir.
               </p>
               <p>
-                Mi práctica clínica se centra en vínculos tóxicos, adicciones y codependencia. Trabajo con un enfoque empático y directivo para ayudar a identificar patrones disfuncionales, recuperar la autoestima y construir apegos seguros — sin perder la propia identidad.
+                Mi práctica clínica se centra en vínculos tóxicos, adicciones y codependencia. Trabajo con un enfoque empático y directivo para ayudar a familiares a recuperar la autoestima, establecer límites firmes y construir apegos seguros sin perder la propia identidad.
+              </p>
+            </div>
+
+            {/* Local GEO & AEO Intent Paragraph */}
+            <div id="geo-local-summary" className="mt-6 p-4.5 rounded-[12px] bg-brand-cream/80 border border-brand-sage/20 text-xs sm:text-sm font-body font-light text-brand-text/95 leading-relaxed">
+              <p>
+                <strong className="font-semibold text-brand-bg-dark">Atención Psicológica en Córdoba Capital:</strong> Brindo consultas presenciales en mi consultorio de <strong>Barrio Don Bosco</strong> (Natania 19, Manzana 7, Casa 14), con fácil acceso desde barrios del noroeste y centro de Córdoba, además de atención virtual por videollamada para familias de toda Argentina y el exterior.
               </p>
             </div>
 

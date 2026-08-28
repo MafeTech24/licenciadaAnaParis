@@ -17,32 +17,44 @@ export default function FAQ() {
 
   const faqData: FAQItem[] = [
     {
-      question: '¿Para quién son los programas de acompañamiento?',
-      answer: 'Los programas están dirigidos exclusivamente a familiares — no a la persona con adicción —. Si tenés un ser querido con consumo problemático y sentís que tu vida se detuvo, que pasás los días vigilando o que necesitás herramientas reales para acompañar sin perderte, este espacio es para vos.'
+      question: '¿Dónde atiende la psicóloga Ana Paris en Córdoba Capital?',
+      answer: 'La Lic. Ana Paris atiende de forma presencial en su consultorio de Barrio Don Bosco (Natania 19, Manzana 7, Casa 14), en la zona noroeste de Córdoba Capital, y de manera virtual por videollamada para pacientes de toda Argentina, Latinoamérica y España.'
+    },
+    {
+      question: '¿Para quién son los programas de acompañamiento familiar?',
+      answer: 'Están dirigidos exclusivamente a familiares de personas con adicciones o consumo problemático (padres, parejas, hermanos, hijos). Si sentís que tu vida se detuvo, que pasás los días vigilando o necesitás herramientas clínicas para poner límites sin perder tu bienestar, este espacio es para vos.'
+    },
+    {
+      question: '¿Cómo saber si necesito acompañamiento psicológico por la adicción de un ser querido?',
+      answer: 'Necesitás acompañamiento si experimentás angustia constante, culpa, agotamiento físico o dificultad para poner límites al consumo de tu familiar. La terapia para familiares permite salir de la dinámica de codependencia y recuperar la propia estabilidad emocional.'
     },
     {
       question: '¿Cuál es la diferencia entre el Programa Grupal y el Individual VIP?',
-      answer: 'El Programa Grupal es un taller virtual con cupo reducido de hasta 10 personas, que se reúne cada primer lunes del mes durante 3 meses (12 encuentros de 90 minutos). El Programa Individual VIP es un proceso 100% privado con encuentros semanales de 60 minutos y soporte directo de lunes a viernes. En el individual no hay dinámicas grupales: todo el espacio y la estrategia son exclusivamente para vos.'
+      answer: 'El Programa Grupal es un taller virtual con cupo reducido (10 personas) de 12 encuentros durante 3 meses con dinámicas colectivas. El Individual VIP es un proceso 100% privado y personalizado con sesiones individuales de 60 minutos y soporte directo de lunes a viernes.'
     },
     {
-      question: '¿Se puede hacer el acompañamiento desde otro país?',
-      answer: 'Sí. Ambos programas son 100% virtuales y están disponibles para toda América Latina y España. El Programa Grupal se realiza por Google Meet. El Individual VIP también puede hacerse por videollamada.'
+      question: '¿La atención es particular o por obra social en Córdoba?',
+      answer: 'La atención se brinda en forma particular para asegurar un seguimiento profundo y sin restricciones de sesiones. Se emiten recibos y comprobantes oficiales para que puedas gestionar eventuales reintegros ante tu obra social o prepaga.'
     },
     {
-      question: '¿Cómo se abonan los programas desde el exterior?',
-      answer: 'Los pagos desde el exterior se realizan a través de PayPal. Los pagos desde Argentina se gestionan por MercadoPago o transferencia bancaria. Para conocer los valores actualizados, escribinos directamente por WhatsApp.'
+      question: '¿Ofrecen una primera consulta de orientación gratuita?',
+      answer: 'Sí, antes de comenzar cualquier proceso se realiza una primera sesión de claridad gratuita de 20 minutos para evaluar tu situación familiar, responder inquietudes y definir el abordaje más adecuado.'
     },
     {
-      question: '¿Qué recursos digitales están disponibles?',
-      answer: 'En la sección Recursos encontrás dos packs disponibles en Hotmart: el Pack E-Book (incluye el libro Intervención familiar en adicciones, la Guía práctica de respuestas y acciones, y la Guía de mindfulness) y el Pack Audiolibro (el libro completo en audio de aproximadamente 1h 40min, más las mismas guías). Todos los materiales fueron creados por la Lic. Ana Paris.'
+      question: '¿Se puede hacer el acompañamiento de forma virtual desde otra provincia o país?',
+      answer: 'Sí. Tanto los programas grupales como el acompañamiento individual cuentan con modalidad 100% online por Google Meet para familiares en cualquier punto de Argentina, América Latina y España.'
     },
     {
-      question: '¿Quién es Ana Paris?',
-      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Nació en una familia con profundo compromiso en el tema: sus padres crearon la Fundación por un Mundo Mejor en Córdoba, dedicada al abordaje de las adicciones. Su práctica clínica se centra en vínculos tóxicos, adicciones y codependencia.'
+      question: '¿Qué recursos digitales y libros están disponibles?',
+      answer: 'En la sección Recursos encontrás el Pack E-Book y el Pack Audiolibro (libro Intervención familiar en adicciones, Guía práctica de respuestas y acciones, y Guía de mindfulness). Todos los materiales fueron elaborados por la Lic. Ana Paris y se descargan por Hotmart.'
     },
     {
-      question: '¿Los programas reemplazan un tratamiento para la persona con adicción?',
-      answer: 'No. Los programas están diseñados para el familiar, no para quien tiene el consumo problemático. El objetivo es que vos puedas recuperar tu vida, establecer límites saludables y acompañar desde un lugar de mayor claridad y cuidado propio.'
+      question: '¿Quién es Ana Paris y cuál es su trayectoria?',
+      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Creció en una familia pionera en el abordaje de adicciones en Córdoba (Fundación por un Mundo Mejor) y cuenta con amplia experiencia clínica en codependencia y vínculos.'
+    },
+    {
+      question: '¿Los programas reemplazan un tratamiento para la persona con consumo problemático?',
+      answer: 'No. Los programas están diseñados para el familiar, no para la persona que consume. El objetivo es que vos recuperes tu tranquilidad, aprendas a intervenir eficazmente y dejes de sostener el caos sin descuidar tu propia salud.'
     }
   ];
 

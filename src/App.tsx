@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import Talleres from './pages/Talleres';
 import Recursos from './pages/Recursos';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
+import SEOHead from './components/SEOHead';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,6 +47,14 @@ export default function App() {
           {/* Main Home Route */}
           <Route path="/" element={
             <main id="main-content-flow" className="flex flex-col">
+              {/* Dynamic Route SEO & Canonical */}
+              <SEOHead
+                title="Lic. Ana Paris | Psicóloga en Córdoba Capital | Adicciones y Acompañamiento Familiar"
+                description="Consultorio de psicología de la Lic. Ana Paris en Córdoba Capital (Barrio Don Bosco). Especialista UNC en adicciones y acompañamiento a familiares de personas con consumo problemático. Atención presencial y virtual."
+                canonicalUrl="https://licenciadaanaparis.com/"
+                keywords="psicóloga Córdoba capital, psicóloga adicciones Córdoba, psicóloga Barrio Don Bosco Córdoba, acompañamiento familiar adicciones Córdoba, Ana Paris psicóloga UNC"
+              />
+
               {/* Section 0: Video Cover Portada */}
               <VideoCover />
 

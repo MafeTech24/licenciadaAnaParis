@@ -71,9 +71,10 @@
             "alternateName": "UNC"
           },
           "knowsAbout": [
-            "Adicciones y consumo problemático",
+            "Psicología en adicciones y consumo problemático",
             "Acompañamiento familiar en adicciones",
-            "Psicología clínica",
+            "Codependencia y límites familiares",
+            "Psicología clínica en Córdoba Capital",
             "Doula y acompañamiento perinatal",
             "Intervención familiar"
           ],
@@ -84,12 +85,14 @@
         {
           "@type": ["MedicalBusiness", "Psychologist"],
           "@id": "https://licenciadaanaparis.com/#consultorio",
-          "name": "Consultorio Lic. Ana Paris - Psicología & Doula",
-          "description": "Consultorio de atención presencial para psicología y acompañamiento a familiares en adicciones.",
+          "name": "Consultorio Psicológico Lic. Ana Paris",
+          "alternateName": "Lic. Ana Paris Psicología & Doula Córdoba",
+          "description": "Consultorio de atención presencial y virtual para psicología clínica, adicciones y acompañamiento a familiares en Córdoba Capital.",
           "url": "https://licenciadaanaparis.com",
           "telephone": "+5493515557316",
           "email": "licenciadaanaparis@gmail.com",
           "image": "https://licenciadaanaparis.com/og-image.png",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Natania 19, Manzana 7, Casa 14, Barrio Don Bosco",
@@ -97,17 +100,55 @@
             "addressRegion": "Córdoba",
             "addressCountry": "AR"
           },
-          "hasMap": "https://www.google.com/maps/search/?api=1&query=Natania%2019%2C%20Manzana%207%2C%20Casa%2014%2C%20Barrio%20Don%20Bosco%2C%20C%C3%B3rdoba%2C%20Argentina"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-31.3836762",
+            "longitude": "-64.2723913"
+          },
+          "hasMap": "https://www.google.com/maps/place/Subof+Ppal+Francisco+Tomas+Luna+%26+Pasaje+Privado+N%C3%BAmero+7,+X5003+C%C3%B3rdoba/@-31.3836762,-64.2723913,17z",
+          "areaServed": [
+            "Córdoba Capital",
+            "Barrio Don Bosco",
+            "Córdoba",
+            "Argentina",
+            "América Latina",
+            "España"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ],
+          "sameAs": [
+            "https://instagram.com/licenciadaanaparis"
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://licenciadaanaparis.com/#website",
           "url": "https://licenciadaanaparis.com",
-          "name": "Lic. Ana Paris — Psicóloga & Doula",
-          "description": "Sitio oficial de la Lic. Ana Cristina Paris. Acompañamiento psicológico para familiares que atraviesan la problemática de adicción.",
+          "name": "Lic. Ana Paris — Psicóloga & Doula Córdoba",
+          "description": "Sitio oficial de la Lic. Ana Cristina Paris. Acompañamiento psicológico para familiares que atraviesan la problemática de adicción en Córdoba Capital y online.",
           "inLanguage": "es-AR",
           "publisher": {
             "@id": "https://licenciadaanaparis.com/#ana-paris"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              "#geo-local-summary",
+              "#about-bio-summary",
+              "#faq-list"
+            ]
           }
         },
         {
@@ -119,7 +160,7 @@
             "@id": "https://licenciadaanaparis.com/#ana-paris"
           },
           "serviceType": "Acompañamiento psicológico grupal",
-          "areaServed": ["Argentina", "América Latina", "España"],
+          "areaServed": ["Córdoba Capital", "Argentina", "América Latina", "España"],
           "availableChannel": {
             "@type": "ServiceChannel",
             "serviceUrl": "https://licenciadaanaparis.com/talleres",
@@ -146,7 +187,7 @@
             "@id": "https://licenciadaanaparis.com/#ana-paris"
           },
           "serviceType": "Acompañamiento psicológico individual",
-          "areaServed": ["Argentina", "América Latina", "España"],
+          "areaServed": ["Córdoba Capital", "Argentina", "América Latina", "España"],
           "availableChannel": {
             "@type": "ServiceChannel",
             "serviceUrl": "https://licenciadaanaparis.com/talleres",
@@ -170,18 +211,42 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "¿Para quién es el programa de acompañamiento familiar en adicciones?",
+              "name": "¿Dónde atiende la psicóloga Ana Paris en Córdoba Capital?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "El programa está dirigido a familiares que tienen un ser querido con consumo problemático y necesitan orientación, herramientas y acompañamiento profesional para recuperar su propio bienestar."
+                "text": "La Lic. Ana Paris atiende de manera presencial en su consultorio ubicado en Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba Capital (zona noroeste de la ciudad), y de manera virtual por videollamada para pacientes de toda Argentina, Latinoamérica y España."
               }
             },
             {
               "@type": "Question",
-              "name": "¿Cuál es la diferencia entre el programa grupal y el individual?",
+              "name": "¿Para quién son los programas de acompañamiento familiar en adicciones?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "El programa grupal es un taller con cupo reducido de 10 personas que se reúne virtualmente cada lunes del mes durante 3 meses. El acompañamiento individual VIP es un proceso privado y personalizado con encuentros semanales de 60 minutos y soporte de lunes a viernes."
+                "text": "Los programas están dirigidos exclusivamente a familiares de personas con consumo problemático (padres, parejas, hermanos, hijos) que necesitan orientación, herramientas clínicas para poner límites y acompañamiento para recuperar su propia vida."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cómo saber si necesito acompañamiento psicológico por la adicción de un ser querido?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si sentís que tu vida cotidiana se detuvo, pasás el día vigilando o controlando a tu ser querido, sentís culpa o angustia permanente y no lográs poner límites claros, el acompañamiento psicológico te brindará herramientas para salir del agotamiento y la codependencia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la diferencia entre el programa grupal y el acompañamiento individual VIP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El programa grupal es un taller de cupo reducido (10 personas) con 12 encuentros virtuales de 90 minutos durante 3 meses. El acompañamiento individual VIP es un proceso 100% privado y personalizado con sesiones individuales de 60 minutos y soporte directo de lunes a viernes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿La atención es particular o por obra social en Córdoba?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La atención psicológica y los programas de la Lic. Ana Paris se brindan de forma particular, lo que permite un seguimiento personalizado sin límites de sesiones. Se emiten comprobantes profesionales para que puedas gestionar reintegros ante tu obra social o prepaga si tu plan lo contempla."
               }
             },
             {
@@ -189,23 +254,23 @@
               "name": "¿Ofrecen una primera consulta gratuita?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sí. Antes de comenzar cualquier programa se realiza una primera entrevista gratuita para conocer la situación del familiar, responder dudas y evaluar qué espacio es el más adecuado."
+                "text": "Sí. Antes de comenzar cualquier programa se realiza una primera sesión de claridad gratuita de 20 minutos para evaluar tu situación familiar, responder inquietudes y definir el plan de trabajo más conveniente."
               }
             },
             {
               "@type": "Question",
-              "name": "¿Se puede hacer el acompañamiento de forma virtual desde otro país?",
+              "name": "¿Se puede hacer el acompañamiento de forma virtual desde otra provincia o país?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sí. Ana Paris atiende de forma virtual a familiares de toda América Latina y España. Los programas grupales se realizan por Google Meet y los individuales también pueden ser por videollamada."
+                "text": "Sí. La Lic. Ana Paris atiende de manera virtual a pacientes de toda Argentina, América Latina y España a través de Google Meet y videollamadas privadas."
               }
             },
             {
               "@type": "Question",
-              "name": "¿Qué es la Fundación por un Mundo Mejor?",
+              "name": "¿Qué formación y trayectoria tiene la Lic. Ana Paris en Córdoba?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Es una fundación en Córdoba, Argentina, dedicada al abordaje de las adicciones, fundada por los padres de Ana Paris. Su legado familiar es parte central de su formación y vocación profesional."
+                "text": "Ana Cristina Paris es Licenciada en Psicología egresada de la Universidad Nacional de Córdoba (UNC) y Doula certificada. Es hija de los fundadores de la Fundación por un Mundo Mejor en Córdoba, con amplia trayectoria y especialización en adicciones, codependencia y vínculos."
               }
             }
           ]

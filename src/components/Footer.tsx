@@ -64,7 +64,7 @@ export default function Footer() {
 
             <div className="flex flex-col space-y-2.5">
               <a 
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba, Argentina')}`}
+                href="https://www.google.com/maps/place/Subof+Ppal+Francisco+Tomas+Luna+%26+Pasaje+Privado+N%C3%BAmero+7,+X5003+C%C3%B3rdoba/@-31.3836762,-64.2723913,17z"
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-start gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
