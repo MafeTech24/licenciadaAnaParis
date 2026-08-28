@@ -75,7 +75,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
             <span className={`font-display font-semibold italic text-xl tracking-wide transition-colors duration-300 ${!isTransparentOnVideo ? 'text-brand-text' : 'text-brand-cream'}`}>
               Ana Paris
             </span>
-            <span className={`text-[10px] uppercase tracking-[0.15em] font-body transition-colors duration-300 ${!isTransparentOnVideo ? 'text-brand-text-muted' : 'text-brand-cream/80'}`}>
+            <span className={`text-xs uppercase tracking-[0.15em] font-body transition-colors duration-300 ${!isTransparentOnVideo ? 'text-brand-text-muted' : 'text-brand-cream/80'}`}>
               Psicóloga & Doula
             </span>
           </div>

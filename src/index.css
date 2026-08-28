@@ -41,11 +41,29 @@
   }
 }
 
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 .paper-texture {

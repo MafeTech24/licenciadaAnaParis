@@ -115,13 +115,13 @@ export default function Talleres() {
           >
             {/* Header / Badge */}
             <div className="p-7 border-b border-brand-sage/10 bg-brand-bg-sage/40">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EDF2EC] text-[#3D6B38] border border-brand-sage/20 mb-3 text-[10px] font-semibold tracking-wider uppercase">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EDF2EC] text-[#3D6B38] border border-brand-sage/20 mb-3 text-xs font-semibold tracking-wider uppercase">
                 Programa Grupal
               </span>
-              <h2 className="font-display font-semibold text-2xl text-brand-bg-dark mb-2">
+              <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-bg-dark mb-2">
                 Acompañamiento Grupal para Familiar de Persona con Consumo Problemático
               </h2>
-              <p className="font-body font-light text-xs text-brand-text-muted leading-relaxed">
+              <p className="font-body font-light text-sm text-brand-text-muted leading-relaxed">
                 Taller grupal con cupo reducido para garantizar la interacción personalizada de familiares que atraviesan la problemática de adicción de un ser querido y necesitan orientación, herramientas y acompañamiento profesional. En algunos módulos participan profesionales invitados de otras áreas.
               </p>
             </div>
@@ -136,9 +136,9 @@ export default function Talleres() {
                 </h3>
                 <ul className="space-y-2.5">
                   {groupForWhom.map((item, idx) => (
-                    <li key={idx} className="flex gap-2.5 items-start text-xs sm:text-sm font-body font-light text-brand-text/95 leading-snug">
+                    <li key={idx} className="flex gap-2.5 items-start text-sm font-body font-light text-brand-text/95 leading-snug">
                       <span className="p-0.5 bg-brand-sage/20 text-[#3D6B38] rounded-full mt-0.5 shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <CheckCircle2 className="w-4 h-4" />
                       </span>
                       <span>{item}</span>
                     </li>
@@ -157,12 +157,12 @@ export default function Talleres() {
                   {/* Mes 1 */}
                   <div className="flex gap-3">
                     <div className="flex flex-col items-center shrink-0">
-                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-[10px] font-bold flex items-center justify-center">1</span>
+                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-xs font-bold flex items-center justify-center">1</span>
                       <span className="w-[1px] h-full bg-brand-sage/30 mt-1" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-semibold text-brand-bg-dark">Mes 1 — Conciencia de enfermedad</h4>
-                      <p className="text-xs font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
+                      <h4 className="text-sm font-semibold text-brand-bg-dark">Mes 1 — Conciencia de enfermedad</h4>
+                      <p className="text-xs sm:text-sm font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
                         Entender cómo opera la adicción, desarmar la culpa y salir de la negación.
                       </p>
                     </div>
@@ -170,12 +170,12 @@ export default function Talleres() {
                   {/* Mes 2 */}
                   <div className="flex gap-3">
                     <div className="flex flex-col items-center shrink-0">
-                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-[10px] font-bold flex items-center justify-center">2</span>
+                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-xs font-bold flex items-center justify-center">2</span>
                       <span className="w-[1px] h-full bg-brand-sage/30 mt-1" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-semibold text-brand-bg-dark">Mes 2 — Separación psicológica y autonomía</h4>
-                      <p className="text-xs font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
+                      <h4 className="text-sm font-semibold text-brand-bg-dark">Mes 2 — Separación psicológica y autonomía</h4>
+                      <p className="text-xs sm:text-sm font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
                         Recuperar tu vida, tu rutina y tu proyecto personal.
                       </p>
                     </div>
@@ -183,11 +183,11 @@ export default function Talleres() {
                   {/* Mes 3 */}
                   <div className="flex gap-3">
                     <div className="flex flex-col items-center shrink-0">
-                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-[10px] font-bold flex items-center justify-center">3</span>
+                      <span className="w-6 h-6 rounded-full bg-brand-bg-dark text-white text-xs font-bold flex items-center justify-center">3</span>
                     </div>
                     <div>
-                      <h4 className="text-xs font-semibold text-brand-bg-dark">Mes 3 — Límites personales</h4>
-                      <p className="text-xs font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
+                      <h4 className="text-sm font-semibold text-brand-bg-dark">Mes 3 — Límites personales</h4>
+                      <p className="text-xs sm:text-sm font-body font-light text-brand-text-muted mt-0.5 leading-relaxed">
                         Aprender a decir no con firmeza y proteger tu salud emocional y financiera.
                       </p>
                     </div>
@@ -204,8 +204,8 @@ export default function Talleres() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {groupDetails.map((detail, idx) => (
-                    <div key={idx} className="flex gap-2 items-center text-xs font-body font-light text-brand-text/90">
-                      <detail.icon className="w-3.5 h-3.5 text-brand-sage-dark shrink-0" />
+                    <div key={idx} className="flex gap-2 items-center text-xs sm:text-sm font-body font-light text-brand-text/90">
+                      <detail.icon className="w-4 h-4 text-brand-sage-dark shrink-0" />
                       <span>{detail.text}</span>
                     </div>
                   ))}
@@ -220,12 +220,12 @@ export default function Talleres() {
                   IMPORTANTE
                 </h3>
                 <div className="space-y-3">
-                  <p className="text-xs font-semibold text-brand-bg-dark">
+                  <p className="text-sm font-semibold text-brand-bg-dark">
                     Primera Sesión de claridad <b>GRATUITA</b>.</p>
-                  <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
+                  <p className="text-xs sm:text-sm font-body font-light text-brand-text-muted leading-relaxed">
                     Antes de sumarte al programa, te invitamos a tener la primera sesión de claridad de 20 minutos gratuita para identificar tu necesidad, para conocer tu situación, responder tus dudas y evaluar si este espacio es adecuado para vos.
                   </p>
-                  <p className="text-[10px] font-body text-brand-text-muted italic">
+                  <p className="text-xs font-body text-brand-text-muted italic">
                     Tocá el botón y coordinamos una primera conversación.
                   </p>
                 </div>
@@ -257,13 +257,13 @@ export default function Talleres() {
 
             {/* Header / Badge */}
             <div className="p-7 border-b border-brand-sage/10 bg-brand-cream/80">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-accent/15 text-brand-accent border border-brand-accent/20 mb-3 text-[10px] font-semibold tracking-wider uppercase">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-accent/15 text-brand-accent border border-brand-accent/20 mb-3 text-xs font-semibold tracking-wider uppercase">
                 Programa Individual
               </span>
-              <h2 className="font-display font-semibold text-2xl text-brand-bg-dark mb-2">
+              <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-bg-dark mb-2">
                 Acompañamiento Individual VIP
               </h2>
-              <p className="font-body font-light text-xs text-brand-text-muted leading-relaxed">
+              <p className="font-body font-light text-sm text-brand-text-muted leading-relaxed">
                 Programa individual y personalizado, dirigido a familiares que atraviesan la problemática de adicción de un ser querido y necesitan un espacio privado, profundo y adaptado a su historia familiar.
               </p>
             </div>
@@ -278,9 +278,9 @@ export default function Talleres() {
                 </h3>
                 <ul className="space-y-2.5">
                   {groupForWhom.map((item, idx) => (
-                    <li key={idx} className="flex gap-2.5 items-start text-xs sm:text-sm font-body font-light text-brand-text/95 leading-snug">
+                    <li key={idx} className="flex gap-2.5 items-start text-sm font-body font-light text-brand-text/95 leading-snug">
                       <span className="p-0.5 bg-brand-sage/20 text-[#3D6B38] rounded-full mt-0.5 shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <CheckCircle2 className="w-4 h-4" />
                       </span>
                       <span>{item}</span>
                     </li>
@@ -297,9 +297,9 @@ export default function Talleres() {
                 </h3>
                 <ul className="space-y-3">
                   {vipIncludes.map((item, idx) => (
-                    <li key={idx} className="flex gap-2.5 items-start text-xs sm:text-sm font-body font-light text-brand-text/95 leading-snug">
+                    <li key={idx} className="flex gap-2.5 items-start text-sm font-body font-light text-brand-text/95 leading-snug">
                       <span className="p-0.5 bg-brand-accent/10 text-brand-accent rounded-full mt-0.5 shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        <CheckCircle2 className="w-4 h-4" />
                       </span>
                       <span>{item}</span>
                     </li>
@@ -311,14 +311,14 @@ export default function Talleres() {
 
               {/* Diferenciador Quote */}
               <div className="bg-[#F5F0E8]/60 p-5 rounded-xl border border-brand-sage/10 relative overflow-hidden">
-                <div className="absolute -top-4 -right-2 text-brand-accent/5 font-display text-[120px] font-bold pointer-events-none select-none select-none">
+                <div className="absolute -top-4 -right-2 text-brand-accent/5 font-display text-[120px] font-bold pointer-events-none select-none">
                   “
                 </div>
-                <h3 className="text-[10px] uppercase tracking-wider font-bold text-brand-sage-dark mb-1.5 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-brand-accent" />
+                <h3 className="text-xs uppercase tracking-wider font-bold text-brand-sage-dark mb-1.5 flex items-center gap-1">
+                  <ShieldCheck className="w-4 h-4 text-brand-accent" />
                   Estrategia Exclusiva
                 </h3>
-                <p className="font-display font-light text-brand-bg-dark italic text-base leading-relaxed relative z-10">
+                <p className="font-display font-light text-brand-bg-dark italic text-lg leading-relaxed relative z-10">
                   "En el programa VIP no hay turnos para hablar ni dinámicas grupales. Todo el espacio, el tiempo y la estrategia están pensados exclusivamente para vos y tu situación familiar."
                 </p>
               </div>
@@ -331,16 +331,16 @@ export default function Talleres() {
                   IMPORTANTE
                 </h3>
                 <div className="space-y-3">
-                  <p className="text-xs font-semibold text-brand-bg-dark">
+                  <p className="text-sm font-semibold text-brand-bg-dark">
                     Primera Sesión de claridad <b>GRATUITA</b>.
                   </p>
-                  <p className="text-xs font-body font-light text-brand-text-muted leading-relaxed">
+                  <p className="text-xs sm:text-sm font-body font-light text-brand-text-muted leading-relaxed">
                     El acompañamiento individual comienza con una primera sesión de claridad de 20 minutos gratuita, pensada para conocer tu historia familiar, entender qué necesitás y evaluar juntos el mejor camino de trabajo.
                   </p>
-                  <p className="text-xs font-body italic text-brand-accent leading-relaxed">
+                  <p className="text-xs sm:text-sm font-body italic text-brand-accent leading-relaxed">
                     Este espacio es privado, personalizado y diseñado especialmente para tu situación.
                   </p>
-                  <p className="text-[10px] font-body text-brand-text-muted italic">
+                  <p className="text-xs font-body text-brand-text-muted italic">
                     Tocá el botón y coordinamos una primera conversación.
                   </p>
                 </div>

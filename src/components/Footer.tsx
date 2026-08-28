@@ -46,51 +46,51 @@ export default function Footer() {
 
           {/* Columna 1 — Identidad */}
           <div className="flex flex-col items-start text-left">
-            <div className="flex items-center gap-2 mb-4">
-              <Leaf className="w-5 h-5 text-brand-sage" />
+            <div className="flex items-center gap-2.5 mb-4">
+              <Leaf className="w-6 h-6 text-brand-sage" />
               <div>
-                <span className="font-display font-semibold italic text-base tracking-wide text-brand-cream block">
+                <span className="font-display font-semibold italic text-lg tracking-wide text-brand-cream block">
                   Lic. Ana Paris
                 </span>
-                <span className="text-[9px] uppercase tracking-[0.2em] font-body text-brand-sage block">
+                <span className="text-xs uppercase tracking-[0.2em] font-body text-brand-sage block font-medium">
                   Psicóloga & Doula
                 </span>
               </div>
             </div>
 
-            <div className="flex flex-col space-y-2.5">
+            <div className="flex flex-col space-y-3">
               <a 
                 href="https://www.google.com/maps/place/Subof+Ppal+Francisco+Tomas+Luna+%26+Pasaje+Privado+N%C3%BAmero+7,+X5003+C%C3%B3rdoba/@-31.3836762,-64.2723913,17z"
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex items-start gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
+                className="flex items-start gap-2.5 text-xs sm:text-sm font-body text-brand-cream/75 hover:text-brand-cream transition-colors"
               >
-                <MapPin className="w-3.5 h-3.5 text-brand-sage shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-brand-sage shrink-0 mt-0.5" />
                 <span>Natania 19, Manzana 7, Casa 14, Barrio Don Bosco, Córdoba</span>
               </a>
               <a 
                 href="https://wa.me/5493515557316" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
+                className="flex items-center gap-2.5 text-xs sm:text-sm font-body text-brand-cream/75 hover:text-brand-cream transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-brand-sage shrink-0" />
+                <Phone className="w-4 h-4 text-brand-sage shrink-0" />
                 <span>+54 9 3515 55-7316</span>
               </a>
               <a 
                 href="mailto:licenciadaanaparis@gmail.com" 
-                className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
+                className="flex items-center gap-2.5 text-xs sm:text-sm font-body text-brand-cream/75 hover:text-brand-cream transition-colors"
               >
-                <Mail className="w-3.5 h-3.5 text-brand-sage shrink-0" />
+                <Mail className="w-4 h-4 text-brand-sage shrink-0" />
                 <span>licenciadaanaparis@gmail.com</span>
               </a>
               <a 
                 href="https://instagram.com/licenciadaanaparis" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex items-center gap-2 text-[11px] font-body text-brand-cream/60 hover:text-brand-cream transition-colors"
+                className="flex items-center gap-2.5 text-xs sm:text-sm font-body text-brand-cream/75 hover:text-brand-cream transition-colors"
               >
-                <span className="w-3.5 h-3.5 rounded-full border border-brand-sage flex items-center justify-center text-[7px] font-bold text-brand-sage leading-none shrink-0">IG</span>
+                <span className="w-4 h-4 rounded-full border border-brand-sage flex items-center justify-center text-[8px] font-bold text-brand-sage leading-none shrink-0">IG</span>
                 <span>@licenciadaanaparis</span>
               </a>
             </div>
@@ -98,54 +98,54 @@ export default function Footer() {
 
           {/* Columna 2 — Navegación */}
           <div className="flex flex-col items-start text-left">
-            <span className="text-[10px] uppercase tracking-widest text-brand-sage mb-4 block">
+            <span className="text-xs uppercase tracking-widest text-brand-sage mb-4 block font-semibold">
               Navegación
             </span>
-            <div className="flex flex-col space-y-2.5">
+            <div className="flex flex-col space-y-3">
               <a
                 href="#sobre-mi"
                 onClick={(e) => handleAnchorClick(e, '#sobre-mi')}
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Sobre mí
               </a>
               <a
                 href="#especialidades"
                 onClick={(e) => handleAnchorClick(e, '#especialidades')}
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Especialidades
               </a>
               <Link
                 to="/talleres"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Talleres
               </Link>
               <Link
                 to="/recursos"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Recursos
               </Link>
               <a
                 href="#galeria"
                 onClick={(e) => handleAnchorClick(e, '#galeria')}
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Galería
               </a>
               <a
                 href="#contacto"
                 onClick={(e) => handleAnchorClick(e, '#contacto')}
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Contacto
               </a>
               <a
                 href="#faq"
                 onClick={(e) => handleAnchorClick(e, '#faq')}
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Preguntas Frecuentes
               </a>
@@ -154,19 +154,19 @@ export default function Footer() {
 
           {/* Columna 3 — Programas */}
           <div className="flex flex-col items-start text-left">
-            <span className="text-[10px] uppercase tracking-widest text-brand-sage mb-4 block">
+            <span className="text-xs uppercase tracking-widest text-brand-sage mb-4 block font-semibold">
               Programas
             </span>
-            <div className="flex flex-col space-y-2.5 mb-6">
+            <div className="flex flex-col space-y-3 mb-6">
               <Link
                 to="/talleres"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Programa Grupal — Consumo Problemático
               </Link>
               <Link
                 to="/talleres"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors"
               >
                 Acompañamiento Individual VIP
               </Link>
@@ -174,34 +174,34 @@ export default function Footer() {
                 href="https://wa.me/5493515557316?text=Hola%20Ana%2C%20quiero%20saber%20más%20sobre%20los%20programas."
                 target="_blank"
                 rel="noreferrer"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors flex items-center gap-1"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors flex items-center gap-1.5"
               >
                 Primera sesión de claridad gratuita
-                <ArrowRight className="w-3 h-3 inline text-brand-sage" />
+                <ArrowRight className="w-3.5 h-3.5 inline text-brand-sage" />
               </a>
             </div>
 
-            <span className="text-[10px] uppercase tracking-widest text-brand-sage mb-4 block">
+            <span className="text-xs uppercase tracking-widest text-brand-sage mb-4 block font-semibold">
               Recursos Digitales
             </span>
-            <div className="flex flex-col space-y-2.5">
+            <div className="flex flex-col space-y-3">
               <a
                 href="https://go.hotmart.com/V106250937W"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors flex items-center gap-1"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors flex items-center gap-1.5"
               >
                 Pack E-Book
-                <ArrowRight className="w-3 h-3 inline text-brand-sage" />
+                <ArrowRight className="w-3.5 h-3.5 inline text-brand-sage" />
               </a>
               <a
                 href="https://go.hotmart.com/R106296900H"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[11px] font-body text-brand-cream/70 hover:text-brand-cream transition-colors flex items-center gap-1"
+                className="text-xs sm:text-sm font-body text-brand-cream/80 hover:text-brand-cream transition-colors flex items-center gap-1.5"
               >
                 Pack Audiolibro
-                <ArrowRight className="w-3 h-3 inline text-brand-sage" />
+                <ArrowRight className="w-3.5 h-3.5 inline text-brand-sage" />
               </a>
             </div>
           </div>
@@ -215,18 +215,18 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           
           {/* Izquierda */}
-          <p className="font-body text-[10px] text-brand-sage/60">
+          <p className="font-body text-xs text-brand-sage/75">
             © 2026 Lic. Ana Cristina Paris — Córdoba, Argentina
           </p>
 
           {/* Centro — créditos MafeTech */}
-          <p className="font-body text-[10px] text-brand-sage/60">
+          <p className="font-body text-xs text-brand-sage/75">
             Sitio desarrollado por{' '}
             <a
               href="https://mafetech.net"
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-brand-sage/85 hover:text-brand-accent transition-colors"
+              className="font-semibold text-brand-sage/90 hover:text-brand-accent transition-colors"
             >
               MafeTech
             </a>
@@ -235,11 +235,11 @@ export default function Footer() {
           {/* Derecha — Volver arriba */}
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1 text-[11px] font-body tracking-widest text-brand-sage hover:text-brand-cream transition-colors uppercase font-medium focus:outline-none cursor-pointer"
+            className="flex items-center gap-1.5 text-xs font-body tracking-widest text-brand-sage hover:text-brand-cream transition-colors uppercase font-medium focus:outline-none cursor-pointer"
             aria-label="Volver arriba"
           >
             Volver arriba
-            <ArrowUp className="w-3.5 h-3.5" />
+            <ArrowUp className="w-4 h-4" />
           </button>
 
         </div>

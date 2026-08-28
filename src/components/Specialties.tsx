@@ -72,7 +72,7 @@ export default function Specialties() {
                   </div>
 
                   {/* Card category badge */}
-                  <span className="block text-[10px] tracking-[0.14em] font-semibold text-brand-accent font-body mb-2 uppercase">
+                  <span className="block text-xs tracking-[0.14em] font-semibold text-brand-accent font-body mb-2 uppercase">
                     {card.badge}
                   </span>
 
