@@ -16,45 +16,72 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqData: FAQItem[] = [
+    // ── General / Sobre Ana ──
     {
-      question: '¿Dónde atiende la psicóloga Ana Paris en Córdoba Capital?',
-      answer: 'La Lic. Ana Paris atiende de forma presencial en su consultorio de Barrio Don Bosco (Natania 19, Manzana 7, Casa 14), en la zona noroeste de Córdoba Capital, y de manera virtual por videollamada para pacientes de toda Argentina, Latinoamérica y España.'
+      question: '¿Quién es Ana Paris?',
+      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Combina su formación clínica con el legado de su familia —fundadores de la Fundación por un Mundo Mejor en Córdoba— para acompañar procesos de transformación personal, vincular y perinatal con un enfoque empático, cálido y directivo.'
     },
     {
-      question: '¿Para quién son los programas de acompañamiento familiar?',
-      answer: 'Están dirigidos exclusivamente a familiares de personas con adicciones o consumo problemático (padres, parejas, hermanos, hijos). Si sentís que tu vida se detuvo, que pasás los días vigilando o necesitás herramientas clínicas para poner límites sin perder tu bienestar, este espacio es para vos.'
+      question: '¿Para quién son los espacios de acompañamiento que ofrece?',
+      answer: 'Están dirigidos a personas adultas que buscan terapia individual, a mujeres y familias en etapa perinatal, a quienes desean sanar relaciones de codependencia y a familiares de personas con consumo problemático. Cada área cuenta con un encuadre terapéutico específico, adaptado a si necesitás un proceso clínico individual, sostén como Doula o programas de intervención focalizados.'
+    },
+
+    // ── Psicología Clínica individual ──
+    {
+      question: '¿Qué temas se pueden trabajar en un proceso de psicología clínica individual?',
+      answer: 'Se abordan problemáticas vinculares, dependencia emocional, trastornos de ansiedad, duelos, transiciones vitales como la menopausia y gestión de emociones. Es un espacio terapéutico confidencial de adultos orientado a desarmar patrones disfuncionales, fortalecer la autoestima y desarrollar recursos de afrontamiento saludables.'
     },
     {
-      question: '¿Cómo saber si necesito acompañamiento psicológico por la adicción de un ser querido?',
-      answer: 'Necesitás acompañamiento si experimentás angustia constante, culpa, agotamiento físico o dificultad para poner límites al consumo de tu familiar. La terapia para familiares permite salir de la dinámica de codependencia y recuperar la propia estabilidad emocional.'
+      question: '¿Atiende casos de ansiedad, duelos o separaciones vinculares?',
+      answer: 'Sí, el abordaje clínico de la ansiedad, el procesamiento de pérdidas y las rupturas de pareja es una de las áreas centrales de consulta. El trabajo terapéutico brinda herramientas prácticas de regulación emocional y comprensión profunda para transitar momentos de crisis, reorganizar la vida y reconstruir el bienestar.'
+    },
+
+    // ── Acompañamiento Perinatal ──
+    {
+      question: '¿En qué consiste el acompañamiento perinatal como Doula?',
+      answer: 'Es un sostén emocional, físico e informativo integral durante el embarazo, el parto y el puerperio. Como Doula y psicóloga, acompaño a la persona gestante y su entorno a transitar la maternidad con tranquilidad, despejando temores, fortaleciendo la confianza en el propio cuerpo y brindando apoyo en lactancia y crianza temprana.'
     },
     {
-      question: '¿Cuál es la diferencia entre el Programa Grupal y el Individual VIP?',
-      answer: 'El Programa Grupal es un taller virtual con cupo reducido (10 personas) de 12 encuentros durante 3 meses con dinámicas colectivas. El Individual VIP es un proceso 100% privado y personalizado con sesiones individuales de 60 minutos y soporte directo de lunes a viernes.'
+      question: '¿En qué etapas se puede empezar el acompañamiento perinatal?',
+      answer: 'Podés iniciar el acompañamiento en cualquier momento de la gestación, durante la preparación para el parto o en el posparto inmediato. También es un espacio propicio para abordar el deseo de concebir, la búsqueda de embarazo o el procesamiento emocional de experiencias previas de parto y puerperio.'
+    },
+
+    // ── Relaciones Dependientes ──
+    {
+      question: '¿Cómo saber si estoy en una relación de codependencia?',
+      answer: 'Estás en una dinámica de codependencia si priorizás constantemente las necesidades del otro sobre las tuyas, sentís miedo extremo al abandono o justificás conductas dañinas. Otros signos frecuentes son la pérdida de identidad propia, la necesidad de controlar o rescatar a la pareja y la dificultad persistente para poner límites.'
     },
     {
-      question: '¿La atención es particular o por obra social en Córdoba?',
-      answer: 'La atención se brinda en forma particular para asegurar un seguimiento profundo y sin restricciones de sesiones. Se emiten recibos y comprobantes oficiales para que puedas gestionar eventuales reintegros ante tu obra social o prepaga.'
+      question: '¿En qué consiste el programa para salir de relaciones dependientes?',
+      answer: 'Es un proceso terapéutico focalizado en desarticular apegos inseguros, reconstruir el amor propio y aprender a vincularse desde la autonomía. A través de sesiones estructuradas, se identifican las raíces de la dependencia vincular y se adquieren herramientas concretas para poner límites y construir relaciones sanas.'
+    },
+
+    // ── Adicciones familiares ──
+    {
+      question: '¿Para quién es el programa de acompañamiento a familiares de personas con consumo problemático?',
+      answer: 'Está dirigido exclusivamente a familiares (padres, parejas, hermanos, hijos) de personas que atraviesan adicciones o consumo problemático. Su objetivo es brindar orientación clínica y herramientas prácticas para dejar de sostener el caos, manejar la culpa y proteger la salud emocional de la familia.'
     },
     {
-      question: '¿Ofrecen una primera consulta de orientación gratuita?',
-      answer: 'Sí, antes de comenzar cualquier proceso se realiza una primera sesión de claridad gratuita de 20 minutos para evaluar tu situación familiar, responder inquietudes y definir el abordaje más adecuado.'
+      question: '¿Cuál es la diferencia entre el Programa Grupal y el Individual VIP en adicciones familiares?',
+      answer: 'El Programa Grupal es un taller virtual de cupo reducido (10 familiares) con 12 encuentros durante 3 meses para compartir experiencias guiadas; el Individual VIP es un acompañamiento 100% privado y personalizado con sesiones individuales de 60 minutos y soporte directo de lunes a viernes ante situaciones de crisis.'
     },
     {
-      question: '¿Se puede hacer el acompañamiento de forma virtual desde otra provincia o país?',
-      answer: 'Sí. Tanto los programas grupales como el acompañamiento individual cuentan con modalidad 100% online por Google Meet para familiares en cualquier punto de Argentina, América Latina y España.'
+      question: '¿Los programas de adicciones reemplazan un tratamiento para la persona con consumo problemático?',
+      answer: 'No, los programas están orientados específicamente al bienestar, claridad y cuidado del familiar, no al tratamiento médico o psiquiátrico del adicto. Permiten que la familia aprenda a intervenir con firmeza y amor sin descuidar su propia salud y equilibrio diario.'
+    },
+
+    // ── Modalidad y logística ──
+    {
+      question: '¿Se puede hacer el acompañamiento desde otro país?',
+      answer: 'Sí, todas las especialidades y programas cuentan con modalidad virtual para personas de toda Argentina, América Latina y España. Las sesiones y talleres online se realizan mediante videollamada por Google Meet con la misma calidez y profundidad que la atención presencial en Córdoba.'
     },
     {
-      question: '¿Qué recursos digitales y libros están disponibles?',
-      answer: 'En la sección Recursos encontrás el Pack E-Book y el Pack Audiolibro (libro Intervención familiar en adicciones, Guía práctica de respuestas y acciones, y Guía de mindfulness). Todos los materiales fueron elaborados por la Lic. Ana Paris y se descargan por Hotmart.'
+      question: '¿Cómo se abonan los procesos desde el exterior?',
+      answer: 'Los pagos internacionales se gestionan de manera simple y segura a través de PayPal. Para residentes en Argentina, los abonos se realizan por transferencia bancaria o MercadoPago con valores en moneda local.'
     },
     {
-      question: '¿Quién es Ana Paris y cuál es su trayectoria?',
-      answer: 'Ana Cristina Paris es Licenciada en Psicología por la Universidad Nacional de Córdoba (UNC) y Doula certificada. Creció en una familia pionera en el abordaje de adicciones en Córdoba (Fundación por un Mundo Mejor) y cuenta con amplia experiencia clínica en codependencia y vínculos.'
-    },
-    {
-      question: '¿Los programas reemplazan un tratamiento para la persona con consumo problemático?',
-      answer: 'No. Los programas están diseñados para el familiar, no para la persona que consume. El objetivo es que vos recuperes tu tranquilidad, aprendas a intervenir eficazmente y dejes de sostener el caos sin descuidar tu propia salud.'
+      question: '¿Qué recursos digitales están disponibles?',
+      answer: 'En la sección Recursos encontrás el Pack E-Book y el Pack Audiolibro, que incluyen el libro Intervención familiar en adicciones, la Guía práctica de respuestas y acciones y la Guía de mindfulness. Son herramientas de lectura y escucha creadas por la Lic. Ana Paris para acompañar en cualquier momento.'
     }
   ];
 
